@@ -1,0 +1,15 @@
+{
+  "name": "mindandhealth-publish-plugin",
+  "owner": {
+    "name": "Pablo Rodríguez López",
+    "url": "https://mindandhealth.org"
+  },
+  "plugins": [
+    {
+      "name": "mindandhealth-publish",
+      "source": "./plugins/mindandhealth-publish",
+      "description": "Skill editorial conversacional para publicaciones de mindandhealth.org. Acompaña la exploración de ideas que cristalizan en artículos para Obsidian Publish. Canvas iterativo en chat, derivados LinkedIn y prompt imagen 1570:881.",
+      "version": "1.0.0"
+    }
+  ]
+}

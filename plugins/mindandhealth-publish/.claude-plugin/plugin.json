@@ -1,0 +1,11 @@
+{
+  "name": "mindandhealth-publish",
+  "version": "1.0.0",
+  "description": "Skill editorial conversacional para publicaciones de mindandhealth.org. Acompaña la exploración de ideas que cristalizan en artículos para Obsidian Publish. Canvas iterativo en chat, derivados LinkedIn y prompt imagen 1570:881.",
+  "author": {
+    "name": "Pablo Rodríguez López",
+    "url": "https://mindandhealth.org"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["mindandhealth", "publishing", "editorial", "obsidian", "linkedin", "writing", "canvas", "markdown"]
+}
