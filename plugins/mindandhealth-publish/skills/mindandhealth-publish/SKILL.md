@@ -1,6 +1,17 @@
 ---
 name: mindandhealth-publish
-description: Acompaña a Pablo en la exploración conversacional de ideas que pueden (o no) cristalizar en publicaciones para mindandhealth.org (Obsidian Publish). Cuando la conversación madura, abre un canvas markdown en el chat y lo itera. Genera también derivados (newsletter LinkedIn, post feed, prompt imagen 1570:881). Actívalo con /mindandhealth-publish o cuando Pablo quiera pensar/publicar sobre temas de su web.
+version: "1.0.0"
+description: >
+  Skill editorial conversacional para publicaciones de mindandhealth.org
+  (Obsidian Publish). Acompaña la exploración de ideas que emergen en
+  conversación y cristalizan en artículos markdown. Canvas iterativo en
+  el chat, nunca escribe en el vault. Genera derivados: newsletter LinkedIn,
+  post de feed, prompt de imagen 1570:881.
+  Actívalo cuando Pablo diga "mindandhealth-publish", "publiquemos algo
+  sobre X", "pensemos sobre Y para la web", "escribe un artículo para
+  mindandhealth", "saca canvas con esto", "haz la newsletter del artículo",
+  "dame el prompt de imagen para este post", o cualquier petición relacionada
+  con crear, refinar o transformar contenido para mindandhealth.org.
 ---
 
 # Mindandhealth Publishing
