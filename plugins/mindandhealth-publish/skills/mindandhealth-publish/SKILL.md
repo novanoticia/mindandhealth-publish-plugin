@@ -112,7 +112,7 @@ Canvas actualizado:
 3. **Matiz activo.** Disidencia útil, contraargumento, tensión productiva. Evitar dogmatismo.
 4. **Metáfora orientadora.** Cuando el tema lo pida — concreta, sensorial, sin estrépito.
 5. **Cierre reflexivo, no conclusivo.** Pregunta abierta o gesto pequeño, no "en conclusión".
-6. **Pie ético** al final del cuerpo, antes del divisor de Navegación. Siempre.
+6. **Pie ético** al final del cuerpo, antes del divisor de Navegación. Siempre — **pero redactado fresco cada vez**, no copy-paste. Ver `references/pie-etico.md` para invariantes y variación controlada.
 7. **Canvas vive en el chat.** Nunca en disco.
 
 ## Archivos del skill (lectura bajo demanda)
@@ -124,7 +124,7 @@ Canvas actualizado:
 - `modes/pipeline.md` — recorrido completo (conversación → canvas → derivados).
 - `references/voz-editorial.md` — tono, ritmo, metáforas, patrones recurrentes.
 - `references/estructura-yaml.md` — plantilla frontmatter mínima.
-- `references/pie-etico.md` — disclaimer estándar (variantes ES/EN).
+- `references/pie-etico.md` — **variación controlada** del pie · invariantes éticos + registros tonales + protocolo de composición fresca.
 - `references/mapa-tematico.md` — taxonomía y temas principales del sitio.
 - `references/modo-iterativo-canvas.md` — **qué es el canvas aquí** · carriles · hitos · anti-patrones.
 - `derivatives/linkedin-newsletter.md` — artículo → newsletter.
