@@ -1,5 +1,5 @@
 ---
-description: Acompañamiento editorial conversacional para mindandhealth.org. Conversa primero, canvas markdown cuando madura, derivados LinkedIn + prompt imagen 1570:881. Todo vive en el chat, nunca toca el vault.
+description: Acompañamiento editorial conversacional para mindandhealth.org. Conversa primero, canvas markdown cuando madura, derivados LinkedIn + prompt imagen 1570:880. Todo vive en el chat, nunca toca el vault.
 argument-hint: "[contexto opcional: tema, cita, URL, borrador pegado]"
 ---
 

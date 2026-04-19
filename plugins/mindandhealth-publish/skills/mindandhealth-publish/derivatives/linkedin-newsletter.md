@@ -11,7 +11,7 @@ Adaptar el artículo de mindandhealth.org a la newsletter de LinkedIn de Pablo. 
 | Tono | Reflexivo, pausado | Reflexivo pero con más respiración (párrafos más cortos) |
 | Metáfora | Puede ser sutil, extenderse | Explícita pronto, repetida en el cierre |
 | Estructura | H2 numeradas o libres | H2 claras, con respiración (subtítulo que invita a seguir) |
-| Imágenes | Obsidian `![[imagen.png]]` | Una imagen portada (la 1570:881), no más |
+| Imágenes | Obsidian `![[imagen.png]]` | Una imagen portada (la 1570:880), no más |
 | Enlaces internos | A mindandhealth.org | Solo los imprescindibles (LinkedIn penaliza muchos enlaces externos) |
 | Pie ético | Obligatorio | Versión corta + enlace al manifiesto ético en mindandhealth |
 | Cierre | Reflexivo, resuena | Reflexivo + pregunta directa al lector (LinkedIn invita a comentario) |
@@ -63,7 +63,7 @@ Adaptar el artículo de mindandhealth.org a la newsletter de LinkedIn de Pablo. 
 
 - **Respetar la voz de Pablo.** Nada de "En este artículo exploraremos…" o "5 claves para…". La voz editorial no cambia.
 - **No repetir literalmente párrafos completos** del artículo Obsidian. Re-escribir para el medio.
-- **Imagen portada:** recordar que la 1570:881 va en cabecera de la newsletter (LinkedIn la usa como tarjeta).
+- **Imagen portada:** recordar que la 1570:880 va en cabecera de la newsletter (LinkedIn la usa como tarjeta).
 - **Sin emojis** en el cuerpo (coherente con la voz editorial de Pablo).
 - **Una pregunta final al lector** es obligatoria — es lo que convierte newsletter pasiva en conversación.
 

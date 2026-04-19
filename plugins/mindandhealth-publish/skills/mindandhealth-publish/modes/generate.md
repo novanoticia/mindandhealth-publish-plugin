@@ -96,7 +96,7 @@ Este canvas es un primer volcado. Queda iterar.
 Recuerda que al copiarlo a tu vault tendrás que añadir:
 - Bloque YAML de coautoría (con tu Tagger GPT).
 - Etiquetas finales formateadas (plantilla Obsidian).
-- Imagen, si decides incluirla (puedo darte un prompt 1570:881 si lo pides).
+- Imagen, si decides incluirla (puedo darte un prompt 1570:880 si lo pides).
 
 ¿Quieres que pulamos algo o lo dejamos madurar?
 ```

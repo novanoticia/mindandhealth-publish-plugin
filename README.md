@@ -33,7 +33,7 @@ Los artículos de Pablo **no se piden, emergen**. El flujo que asume el skill:
 - Conversa como interlocutor transdisciplinar: perspectiva, contraargumento, referencia, metáfora candidata, pregunta devolutiva.
 - Cuando se cristaliza y Pablo acepta: abre canvas con YAML mínimo, cuerpo Obsidian-compatible y pie ético al cierre.
 - Itera el canvas según los carriles conversacionales (ver tabla más abajo).
-- Bajo petición: derivados (newsletter LinkedIn, post feed, prompt imagen 1570:881).
+- Bajo petición: derivados (newsletter LinkedIn, post feed, prompt imagen 1570:880).
 - Bajo petición: propuestas de enlaces internos a artículos previos del vault (solo lectura).
 
 ---
@@ -129,7 +129,7 @@ plugins/mindandhealth-publish/
     └── derivatives/
         ├── linkedin-newsletter.md       # Artículo → newsletter
         ├── linkedin-feed.md             # Newsletter → post feed
-        └── banner-spec.md               # Prompt imagen 1570:881
+        └── banner-spec.md               # Prompt imagen 1570:880
 ```
 
 ---
@@ -152,7 +152,7 @@ Bajo petición, a partir de un canvas maduro o un artículo ya publicado:
 
 - **Newsletter LinkedIn** — adaptación extendida con apertura propia.
 - **Post feed LinkedIn** — versión corta derivada de la newsletter.
-- **Prompt de imagen 1570:881** — descripción para banner (no genera imagen; solo el prompt).
+- **Prompt de imagen 1570:880** — descripción para banner (no genera imagen; solo el prompt).
 
 ---
 

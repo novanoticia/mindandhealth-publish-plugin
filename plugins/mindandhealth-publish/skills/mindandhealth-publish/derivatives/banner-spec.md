@@ -1,11 +1,11 @@
-# Derivado: Prompt de imagen 1570:881
+# Derivado: Prompt de imagen 1570:880
 
 ## Propósito
 Generar un **prompt descriptivo** que Pablo pueda pasar a su generador de imagen habitual (DALL·E, Midjourney, Gemini, etc.). El skill **no genera la imagen**; solo el prompt.
 
 ## Formato de la imagen objetivo
 
-- **Proporción:** 1570:881 (aproximadamente 16:9, pero exacto para LinkedIn newsletter banner).
+- **Proporción:** 1570:880 (aproximadamente 16:9, pero exacto para LinkedIn newsletter banner).
 - **Uso principal:** portada de newsletter LinkedIn.
 - **Uso secundario:** imagen de cierre o apertura del artículo Obsidian (opcional).
 - **Puede o no contener texto** (depende de la pieza; preguntar a Pablo si lo quiere).
@@ -26,7 +26,7 @@ Basado en los archivos del vault (`banneretico.png`, `index-portada.png`, `image
 ## Plantilla del prompt
 
 ```
-Imagen horizontal, proporción 1570:881, [ESTILO VISUAL].
+Imagen horizontal, proporción 1570:880, [ESTILO VISUAL].
 
 [DESCRIPCIÓN DEL MOTIVO CENTRAL] — [símbolo/metáfora orientadora del artículo].
 
@@ -47,7 +47,7 @@ Evitar: texto ilegible, estética de stock genérica, figuras humanas con rasgos
 
 ### Tema: ética de IA / pensamiento asistido
 ```
-Imagen horizontal, proporción 1570:881, ilustración vectorial plana con textura.
+Imagen horizontal, proporción 1570:880, ilustración vectorial plana con textura.
 
 Una lámpara de aceite antigua suspendida en medio de un laberinto geométrico que se extiende hacia el horizonte. La lámpara proyecta un haz de luz que ilumina solo una parte del camino.
 
@@ -66,7 +66,7 @@ Evitar: texto ilegible, figuras humanas, estética de stock.
 
 ### Tema: esperanza / filosofía existencial
 ```
-Imagen horizontal, proporción 1570:881, collage digital con textura de grabado.
+Imagen horizontal, proporción 1570:880, collage digital con textura de grabado.
 
 Una grieta vertical en un muro oscuro por la que entra un haz de luz cálida. De la grieta brota una pequeña planta.
 
@@ -85,7 +85,7 @@ Evitar: estética inspiracional genérica, tonos saturados, texto motivacional.
 
 ### Tema: IPFS / tecnología descentralizada
 ```
-Imagen horizontal, proporción 1570:881, estilo geométrico-abstracto.
+Imagen horizontal, proporción 1570:880, estilo geométrico-abstracto.
 
 Una red de nodos hexagonales interconectados que se expande desde el centro hacia los bordes. Algunos nodos están más luminosos, otros apagados, sugiriendo distribución no jerárquica.
 

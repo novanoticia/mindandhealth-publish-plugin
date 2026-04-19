@@ -19,14 +19,14 @@ Según (a/b/c), seguir el modo correspondiente hasta tener un **canvas estable**
 
 **Pausa obligatoria antes de derivados.** Cuando el canvas esté listo, preguntar explícitamente:
 
-> "Canvas listo. ¿Avanzamos a derivados (newsletter LinkedIn / post feed / prompt imagen 1570:881)? ¿Cuáles quieres?"
+> "Canvas listo. ¿Avanzamos a derivados (newsletter LinkedIn / post feed / prompt imagen 1570:880)? ¿Cuáles quieres?"
 
 No avanzar automáticamente.
 
 ### 3. Derivados — orden fijo
 Una vez validado el canvas y confirmados los derivados deseados, producir **en este orden**:
 
-1. **Prompt imagen 1570:881** (`derivatives/banner-spec.md`)  
+1. **Prompt imagen 1570:880** (`derivatives/banner-spec.md`)  
    — primero, porque Pablo puede encargarla en paralelo mientras revisa el resto.
 
 2. **Newsletter LinkedIn** (`derivatives/linkedin-newsletter.md`)  
@@ -44,7 +44,7 @@ Al terminar, ofrecer resumen:
 Paquete listo:
 
 1. ARTÍCULO OBSIDIAN (canvas markdown arriba) — para copiar a tu vault
-2. PROMPT IMAGEN 1570:881 — para pasar a tu generador
+2. PROMPT IMAGEN 1570:880 — para pasar a tu generador
 3. NEWSLETTER LINKEDIN — para copiar al editor de newsletter
 4. POST FEED LINKEDIN — para copiar al editor de feed
 

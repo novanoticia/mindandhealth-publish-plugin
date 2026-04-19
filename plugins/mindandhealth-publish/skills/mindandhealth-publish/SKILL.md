@@ -6,7 +6,7 @@ description: >
   (Obsidian Publish). Acompaña la exploración de ideas que emergen en
   conversación y cristalizan en artículos markdown. Canvas iterativo en
   el chat, nunca escribe en el vault. Genera derivados: newsletter LinkedIn,
-  post de feed, prompt de imagen 1570:881.
+  post de feed, prompt de imagen 1570:880.
   Actívalo cuando Pablo diga "mindandhealth-publish", "publiquemos algo
   sobre X", "pensemos sobre Y para la web", "escribe un artículo para
   mindandhealth", "saca canvas con esto", "haz la newsletter del artículo",
@@ -45,7 +45,7 @@ Ver `modes/conversar.md` (modo por defecto) y `references/modo-iterativo-canvas.
 1. **Conversar** como interlocutor transdisciplinar (aportar perspectiva, contraargumento, referencia, metáfora candidata, pregunta devolutiva).
 2. Cuando se cristaliza y Pablo acepta: **abrir canvas** con YAML mínimo (sin bloque coautoría), cuerpo en markdown Obsidian-compatible, y pie ético al cierre.
 3. **Iterar** el canvas según los carriles conversacionales.
-4. Bajo petición: **derivados** (newsletter LinkedIn, post feed, prompt imagen 1570:881).
+4. Bajo petición: **derivados** (newsletter LinkedIn, post feed, prompt imagen 1570:880).
 5. Bajo petición: **propuestas de enlaces internos** a artículos previos del vault (solo lectura, para referenciarlos).
 
 ## Ruta del vault (solo lectura)
@@ -79,7 +79,7 @@ Estas preguntas **NO van al principio**. Se hacen en el punto de cristalización
 - **Bilingüe ES/EN:** solo para temas importantes (manifiestos, docs de sistema). Por defecto español.
 
 Y al final, cuando el canvas está maduro:
-- **Derivados:** ¿newsletter LinkedIn? ¿post feed? ¿prompt imagen 1570:881?
+- **Derivados:** ¿newsletter LinkedIn? ¿post feed? ¿prompt imagen 1570:880?
 
 ## Protocolo de iteración (cuando hay canvas)
 
@@ -129,7 +129,7 @@ Canvas actualizado:
 - `references/modo-iterativo-canvas.md` — **qué es el canvas aquí** · carriles · hitos · anti-patrones.
 - `derivatives/linkedin-newsletter.md` — artículo → newsletter.
 - `derivatives/linkedin-feed.md` — newsletter → post feed.
-- `derivatives/banner-spec.md` — prompt imagen 1570:881.
+- `derivatives/banner-spec.md` — prompt imagen 1570:880.
 
 ## Invocación
 

@@ -8,7 +8,7 @@
     {
       "name": "mindandhealth-publish",
       "source": "./plugins/mindandhealth-publish",
-      "description": "Skill editorial conversacional para publicaciones de mindandhealth.org. Acompaña la exploración de ideas que cristalizan en artículos para Obsidian Publish. Canvas iterativo en chat, derivados LinkedIn y prompt imagen 1570:881.",
+      "description": "Skill editorial conversacional para publicaciones de mindandhealth.org. Acompaña la exploración de ideas que cristalizan en artículos para Obsidian Publish. Canvas iterativo en chat, derivados LinkedIn y prompt imagen 1570:880.",
       "version": "1.0.0"
     }
   ]
