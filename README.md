@@ -40,14 +40,33 @@ Los artículos de Pablo **no se piden, emergen**. El flujo que asume el skill:
 
 ## Instalación
 
-Añadir el marketplace y activar el plugin desde Claude Code:
+Hay dos formas de instalar el skill según dónde quieras usarlo.
+
+### Claude Code (CLI) y Claude Desktop → pestaña Code
+
+Añadir el marketplace y activar el plugin:
 
 ```bash
 /plugin marketplace add novanoticia/mindandhealth-publish-plugin
 /plugin install mindandhealth-publish@mindandhealth-publish-plugin
 ```
 
-Funciona en Claude Code (CLI) y en Claude Desktop → pestaña **Code**.
+Una vez activo, dispones del slash command `/publish` y de los disparadores en lenguaje natural.
+
+### Claude.ai (Claude Chat) — versión empaquetada como skill
+
+Para usarlo en la web/app de Claude.ai:
+
+1. Descarga el bundle: [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip) (≈33 KB).
+   Versión legible del contenido en [`claude-ai/mindandhealth-publish/`](./claude-ai/mindandhealth-publish/).
+2. En claude.ai: tu avatar (arriba a la derecha) → **Settings** → **Capabilities** → **Skills** → **Upload skill**.
+3. Sube el zip y activa el toggle.
+
+A partir de ahí se invoca en **lenguaje natural** ("publiquemos sobre X", "pensemos sobre Y para la web", "saca canvas", "haz la newsletter del último artículo"…). Claude.ai mostrará una insignia indicando que está usando el skill.
+
+> **Requiere** plan **Max**, **Team** o **Enterprise** con Skills personalizadas habilitadas.
+
+**Diferencias respecto a la versión Claude Code:** no incluye slash command `/publish` (Claude.ai no lo soporta) y no lee el vault local de Obsidian; los enlaces internos solo se proponen si Pablo aporta los títulos o el texto de artículos previos en el chat. Todo lo demás (flujo, principios, modos, derivados, pie ético de variación controlada) es idéntico.
 
 ---
 
@@ -110,26 +129,31 @@ Solo **Petición** y **Sugerencia aprobada** devuelven canvas actualizado. En lo
 ## Arquitectura del skill
 
 ```
-plugins/mindandhealth-publish/
-├── .claude-plugin/plugin.json
-└── skills/mindandhealth-publish/
-    ├── SKILL.md                         # Orquestador y flujo
-    ├── modes/
-    │   ├── conversar.md                 # Modo por defecto
-    │   ├── generate.md                  # Volcado inicial a canvas
-    │   ├── refine.md                    # Pulido de borrador aportado
-    │   ├── transform.md                 # Canvas desde fuente (paper, URL, notas)
-    │   └── pipeline.md                  # Recorrido completo conversación → derivados
-    ├── references/
-    │   ├── voz-editorial.md             # Tono, ritmo, metáforas
-    │   ├── estructura-yaml.md           # Frontmatter mínimo
-    │   ├── pie-etico.md                 # Disclaimer estándar ES/EN
-    │   ├── mapa-tematico.md             # Taxonomía del sitio
-    │   └── modo-iterativo-canvas.md     # Carriles, hitos, anti-patrones
-    └── derivatives/
-        ├── linkedin-newsletter.md       # Artículo → newsletter
-        ├── linkedin-feed.md             # Newsletter → post feed
-        └── banner-spec.md               # Prompt imagen 1570:880
+mindandhealth-publish-plugin/
+├── plugins/mindandhealth-publish/       # Versión Claude Code (plugin con marketplace)
+│   ├── .claude-plugin/plugin.json
+│   └── skills/mindandhealth-publish/
+│       ├── SKILL.md                     # Orquestador y flujo
+│       ├── modes/
+│       │   ├── conversar.md             # Modo por defecto
+│       │   ├── generate.md              # Volcado inicial a canvas
+│       │   ├── refine.md                # Pulido de borrador aportado
+│       │   ├── transform.md             # Canvas desde fuente (paper, URL, notas)
+│       │   └── pipeline.md              # Recorrido completo conversación → derivados
+│       ├── references/
+│       │   ├── voz-editorial.md         # Tono, ritmo, metáforas
+│       │   ├── estructura-yaml.md       # Frontmatter mínimo
+│       │   ├── pie-etico.md             # Variación controlada del pie
+│       │   ├── mapa-tematico.md         # Taxonomía del sitio
+│       │   └── modo-iterativo-canvas.md # Carriles, hitos, anti-patrones
+│       └── derivatives/
+│           ├── linkedin-newsletter.md   # Artículo → newsletter
+│           ├── linkedin-feed.md         # Newsletter → post feed
+│           └── banner-spec.md           # Prompt imagen 1570:880
+├── claude-ai/mindandhealth-publish/     # Versión Claude.ai (mismo contenido, sin slash command ni acceso al vault)
+├── mindandhealth-publish-claude-ai.zip  # Bundle listo para subir a Claude.ai → Settings → Skills
+├── commands/publish.md                  # Slash command /publish (solo Claude Code)
+└── .claude-plugin/marketplace.json      # Manifest del marketplace
 ```
 
 ---
