@@ -40,7 +40,7 @@ Los artículos de Pablo **no se piden, emergen**. El flujo que asume el skill:
 
 ## Instalación
 
-Hay dos formas de instalar el skill según dónde quieras usarlo.
+Hay tres formas de instalar el skill según dónde quieras usarlo.
 
 ### Claude Code (CLI) y Claude Desktop → pestaña Code
 
@@ -67,6 +67,18 @@ A partir de ahí se invoca en **lenguaje natural** ("publiquemos sobre X", "pens
 > **Requiere** plan **Max**, **Team** o **Enterprise** con Skills personalizadas habilitadas.
 
 **Diferencias respecto a la versión Claude Code:** no incluye slash command `/publish` (Claude.ai no lo soporta) y no lee el vault local de Obsidian; los enlaces internos solo se proponen si Pablo aporta los títulos o el texto de artículos previos en el chat. Todo lo demás (flujo, principios, modos, derivados, pie ético de variación controlada) es idéntico.
+
+### Perplexity (Skills)
+
+Perplexity admite el mismo bundle que Claude.ai, sin pasos adicionales:
+
+1. Descarga [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
+2. En Perplexity, entra en la gestión de **Skills** y elige **subir / importar skill**.
+3. Sube el zip y actívalo.
+
+Se invoca en **lenguaje natural**, igual que en Claude.ai (sin slash command `/publish`). Aplican las mismas diferencias respecto a la versión Claude Code señaladas arriba.
+
+> **Nota técnica:** Perplexity valida la longitud del campo `description` del skill **en bytes UTF-8** (límite 1024), no en caracteres; en español los acentos y la `ñ` cuentan como 2 bytes. La descripción de este skill ocupa 708 bytes, holgadamente dentro del límite, por lo que la importación es directa.
 
 ---
 
