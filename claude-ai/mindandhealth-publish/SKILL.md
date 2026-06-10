@@ -1,6 +1,7 @@
 ---
 name: mindandhealth-publish
-description: Acompañamiento editorial conversacional para publicaciones de Pablo Rodríguez López en mindandhealth.org (Obsidian Publish). Acompaña la exploración de ideas que emergen en conversación y cristalizan en artículos markdown. Canvas iterativo en el chat, nunca escribe en el vault. Genera derivados bajo petición (newsletter LinkedIn, post de feed, prompt de imagen 1570:880). Activar cuando Pablo diga "publiquemos sobre X", "pensemos sobre Y para la web", "escribe un artículo para mindandhealth", "saca canvas con esto", "haz la newsletter del artículo", "dame el prompt de imagen para este post", o cualquier petición relacionada con crear, refinar o transformar contenido para mindandhealth.org.
+description: >-
+  Acompañamiento editorial conversacional para las publicaciones en mindandhealth.org (Obsidian Publish): acompaña ideas que cristalizan en artículos markdown, con canvas iterativo en el chat (nunca escribe en el vault) y derivados bajo petición (newsletter LinkedIn, post de feed, prompt de imagen 1570:880). Actívalo cuando Pablo diga "publiquemos sobre X", "saca canvas" o "haz la newsletter", o pida crear, refinar o transformar contenido para la web.
 ---
 
 # Mindandhealth Publishing

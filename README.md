@@ -78,9 +78,19 @@ Perplexity admite el mismo bundle que Claude.ai, sin pasos adicionales:
 
 Se invoca en **lenguaje natural**, igual que en Claude.ai (sin slash command `/publish`). Aplican las mismas diferencias respecto a la versión Claude Code señaladas arriba.
 
-> **Nota técnica:** Perplexity valida la longitud del campo `description` del skill **en bytes UTF-8** (límite 1024), no en caracteres; en español los acentos y la `ñ` cuentan como 2 bytes. La descripción de este skill ocupa 708 bytes, holgadamente dentro del límite, por lo que la importación es directa.
+> **Nota técnica:** el límite de longitud del campo `description` depende de la plataforma: Perplexity valida **en bytes UTF-8** (límite 1024) y Mistral **en caracteres** (límite 500). En español, los acentos y la `ñ` cuentan como 2 bytes. La descripción de este skill mide **453 caracteres / 458 bytes**, dentro de ambos umbrales. Si la editas, no superes los **500 caracteres** para conservar la compatibilidad con Mistral.
 
 ---
+
+### Mistral AI (Skills)
+
+Mistral admite el mismo bundle, instalado desde su espacio **Work**:
+
+1. Descarga [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip) y **descomprímelo**.
+2. En Mistral AI, dentro del espacio **Work**, abre la sección de **Skills**.
+3. Selecciona la **carpeta** resultante (`mindandhealth-publish/`, la que contiene `SKILL.md`).
+
+Se invoca en **lenguaje natural**, igual que en Claude.ai y Perplexity (sin slash command `/publish`).
 
 ## Uso
 
