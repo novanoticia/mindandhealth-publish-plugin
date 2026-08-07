@@ -1,6 +1,5 @@
 ---
 name: mindandhealth-publish
-version: "1.1.0"
 description: >
   Skill editorial conversacional para publicaciones de mindandhealth.org
   (Obsidian Publish). Acompaña la exploración de ideas que emergen en
@@ -12,6 +11,8 @@ description: >
   mindandhealth", "saca canvas con esto", "haz la newsletter del artículo",
   "dame el prompt de imagen para este post", o cualquier petición relacionada
   con crear, refinar o transformar contenido para mindandhealth.org.
+metadata:
+  version: "1.1.0"
 ---
 
 # Mindandhealth Publishing
