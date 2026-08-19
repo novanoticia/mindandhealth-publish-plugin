@@ -1,5 +1,5 @@
 ---
-name: mindandhealth-publish
+name: mindandhealth-publish-chat
 description: >-
   Acompañamiento editorial conversacional para las publicaciones en mindandhealth.org (Obsidian Publish): acompaña ideas que cristalizan en artículos markdown, con canvas iterativo en el chat (nunca escribe en el vault) y derivados bajo petición (newsletter LinkedIn, post de feed, prompt de imagen 1570:880). Actívalo cuando Pablo diga "publiquemos sobre X", "saca canvas" o "haz la newsletter", o pida crear, refinar o transformar contenido para la web.
 ---
