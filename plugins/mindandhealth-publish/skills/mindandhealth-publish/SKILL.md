@@ -12,7 +12,7 @@ description: >
   "dame el prompt de imagen para este post", o cualquier petición relacionada
   con crear, refinar o transformar contenido para mindandhealth.org.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Mindandhealth Publishing
