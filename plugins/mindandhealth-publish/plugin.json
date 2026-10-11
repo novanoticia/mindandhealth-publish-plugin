@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mindandhealth-publish",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Conversational editorial skill for mindandhealth.org publications. It supports the exploration of ideas that crystallize into Obsidian Publish articles. Iterative in-chat canvas, LinkedIn derivatives, and a 1570:880 image prompt.",
   "author": {
     "name": "Pablo Rodríguez López",

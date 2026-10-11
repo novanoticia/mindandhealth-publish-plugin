@@ -1,5 +1,7 @@
 # mindandhealth-publish-plugin
 
+[English](README.md) · [Français](README.fr.md) · [简体中文](README.zh-CN.md)
+
 A Claude Code plugin providing **conversational editorial support** for [mindandhealth.org](https://mindandhealth.org) publications on Obsidian Publish.
 
 > **Compatible with [Agent Plugins 1.0.0](https://agent-plugins.org/specification)**, the portable packaging format of the Agentic AI Foundation. The package contains a portable `plugin.json` manifest and an Agent Skills-compatible `SKILL.md`.
@@ -8,7 +10,7 @@ A Claude Code plugin providing **conversational editorial support** for [mindand
 
 This is not an automatic article writer. It is a thinking partner: it converses first, distills an article when the idea crystallizes, and creates LinkedIn or image-prompt derivatives on request. **Everything stays in chat; the vault is never modified.**
 
-The repository instructions are written in English, but the skill's **default output language is Spanish**. It switches to English or bilingual ES/EN output only when Pablo requests it or the subject explicitly calls for it.
+The skill instructions are written in English, but the **default output language is Spanish**. Request English, French, Simplified Chinese, or bilingual output explicitly; the skill keeps that choice until you change it. Source language and README language do not change this default. See the [language guide](plugins/mindandhealth-publish/skills/mindandhealth-publish/references/languages.md).
 
 ## Mental model
 
@@ -62,7 +64,7 @@ This enables the `/publish` command and natural-language triggers.
 
 ### Claude.ai
 
-1. Download [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip). Its readable source is in [`claude-ai/mindandhealth-publish/`](./claude-ai/mindandhealth-publish/).
+1. Download [`mindandhealth-publish-claude-ai.zip` from Releases](https://github.com/novanoticia/mindandhealth-publish-plugin/releases/latest/download/mindandhealth-publish-claude-ai.zip). Its readable source is in [`claude-ai/mindandhealth-publish/`](./claude-ai/mindandhealth-publish/).
 2. In Claude.ai, open your avatar → **Settings** → **Capabilities** → **Skills** → **Upload skill**.
 3. Upload the ZIP and enable the skill.
 
@@ -72,13 +74,13 @@ Invoke it in natural language: "let's publish something about X," "open a canvas
 
 ### Perplexity
 
-1. Download [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
+1. Download [`mindandhealth-publish-claude-ai.zip` from Releases](https://github.com/novanoticia/mindandhealth-publish-plugin/releases/latest/download/mindandhealth-publish-claude-ai.zip).
 2. Open **Skills** management and choose **Upload / Import skill**.
 3. Upload the ZIP and activate it.
 
 ### Mistral AI
 
-1. Download and extract [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
+1. Download and extract [`mindandhealth-publish-claude-ai.zip` from Releases](https://github.com/novanoticia/mindandhealth-publish-plugin/releases/latest/download/mindandhealth-publish-claude-ai.zip).
 2. In the Mistral **Work** space, open **Skills**.
 3. Select the extracted `mindandhealth-publish-chat/` folder containing `SKILL.md`.
 
@@ -107,6 +109,15 @@ Natural-language examples:
 - "Open a canvas from our discussion."
 - "Make a newsletter from the latest article."
 - "Give me an image prompt for this post."
+
+To select another output language:
+
+- «Continuons en français et préparons la newsletter.»
+- “请用简体中文继续，帮我润色这篇草稿。”
+- “Continue in English.”
+- «Volvamos al español.»
+
+Changing the language does not automatically rewrite an already approved canvas.
 
 ## Canvas iteration protocol
 
@@ -137,7 +148,9 @@ Only **Request** and **Approved suggestion** return an updated canvas.
 ```text
 mindandhealth-publish-plugin/
 ├── plugins/mindandhealth-publish/       # Claude Code variant
-│   ├── plugin.json
+│   ├── plugin.json                     # Canonical shared metadata (portable format)
+│   ├── .claude-plugin/plugin.json      # Claude-compatible manifest, synchronized
+│   ├── commands/publish.md             # Installed /publish command
 │   └── skills/mindandhealth-publish/
 │       ├── SKILL.md                     # Orchestrator and flow
 │       ├── modes/
@@ -148,6 +161,7 @@ mindandhealth-publish-plugin/
 │       │   └── pipeline.md                 # Full journey
 │       ├── references/
 │       │   ├── editorial-voice.md
+│       │   ├── languages.md
 │       │   ├── yaml-structure.md
 │       │   ├── ethical-footer.md
 │       │   ├── topic-map.md
@@ -157,10 +171,37 @@ mindandhealth-publish-plugin/
 │           ├── linkedin-feed.md
 │           └── banner-spec.md
 ├── claude-ai/mindandhealth-publish/     # Chat variant
-├── mindandhealth-publish-claude-ai.zip # Upload-ready chat bundle
-├── commands/publish.md                  # Claude Code slash command
+├── README.fr.md                        # French documentation
+├── README.zh-CN.md                     # Simplified Chinese documentation
+├── scripts/build_distribution.py       # Validation and reproducible ZIP build
+├── .github/workflows/distribution.yml  # CI and release packaging
 └── .claude-plugin/marketplace.json      # Marketplace manifest
 ```
+
+The root `.claude-plugin/` directory describes the **marketplace**, not a second plugin. Its catalog points to `plugins/mindandhealth-publish/`, the only installable plugin directory. Within that directory, `plugin.json` serves portable Agent Plugins clients, while `.claude-plugin/plugin.json` serves Claude. Both are required for compatibility; shared metadata is authored only in the portable manifest.
+
+The chat directory is a separate distribution for clients without local vault access. It retains a distinct skill name and instructions appropriate to that environment.
+
+## Building and releasing
+
+The ZIP is a **release asset**, not a file on `main`. Download it from [Releases](https://github.com/novanoticia/mindandhealth-publish-plugin/releases), or build it locally with Python 3.10+:
+
+```bash
+python3 scripts/build_distribution.py
+```
+
+This creates `dist/mindandhealth-publish-claude-ai.zip`. The `dist/` directory is ignored by Git. The archive contains the `mindandhealth-publish-chat/` folder and all its guides; identical sources produce identical archives.
+
+After changing shared metadata in `plugins/mindandhealth-publish/plugin.json`, synchronize the compatibility manifests:
+
+```bash
+python3 scripts/build_distribution.py --sync-manifests --check
+python3 -m unittest discover -s tests -v
+```
+
+Keep the plugin skill's version aligned with the portable manifest. For a release, add matching notes in `docs/releases/<version>.md` and push a `v<version>` tag. GitHub Actions validates the package, builds the ZIP, and attaches it to the release. Ordinary pushes validate the same package and retain a downloadable Actions artifact.
+
+Older tracked ZIPs remain recoverable from Git history; removing the current copy does not rewrite history.
 
 ## Vault access (Claude Code only)
 

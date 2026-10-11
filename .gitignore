@@ -4,13 +4,18 @@
 .LSOverride
 ._*
 
-# Editores
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Sistema
+# System
 Thumbs.db
 desktop.ini
+
+# Generated distribution artifacts
+/dist/
+/mindandhealth-publish-claude-ai.zip
+__pycache__/

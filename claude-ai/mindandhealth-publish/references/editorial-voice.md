@@ -65,7 +65,7 @@ New metaphors should be concrete, sensory, and restrained. Do not force one; an 
 - ❌ Evangelizing claims ("this technology will change everything," "the future is…").
 - ❌ Closed, categorical conclusions.
 - ❌ "10 tips" lists or pseudo-explanatory optimized formats.
-- ❌ Unnecessary Anglicisms when an established Spanish term exists.
+- ❌ Unnecessary Anglicisms or jargon when a natural equivalent exists in the selected output language.
 - ❌ Emojis in the body, except 🟦🟩 in bilingual system documents or the 🔖📂 symbols added by the final Obsidian template.
 - ❌ Unsourced claims about verifiable facts. Current facts are attributed to a named source.
 
@@ -86,5 +86,6 @@ New metaphors should be concrete, sensory, and restrained. Do not force one; an 
 
 ## Language
 
-- **Default: Spanish.** This applies to the conversation, canvas, frontmatter values, ethical footer, derivatives, and image prompt.
-- **English or bilingual ES/EN only on request or for important topics** such as manifestos, co-authorship system documents, or explicit international outreach. A typical bilingual structure pairs `### 🟦 Etiqueta en español` with `### 🟩 Label in English`, or uses separate `<section lang="es">` and `<section lang="en">` blocks.
+- **Default: Spanish.** This applies to the conversation, canvas, ethical footer, derivatives, and image prompt. Preserve schema keys and controlled frontmatter values.
+- **English, French, or Simplified Chinese on explicit request.** Follow `languages.md` and retain the selected language throughout subsequent turns.
+- **Bilingual output:** agree on the language pair first. Use separate sections with the appropriate language labels, such as `<section lang="fr">` and `<section lang="zh-CN">`. Do not infer a language change merely from the topic or source material.

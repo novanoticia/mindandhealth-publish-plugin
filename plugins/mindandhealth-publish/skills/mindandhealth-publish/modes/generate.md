@@ -19,11 +19,13 @@ When the idea crystallizes (or Pablo asks directly for a canvas), briefly confir
 
 - **Register:** canonical (H2 essay) / poetic / fragmentary / dialogue / manifesto.
 - **Approximate length:** short (<800) / medium (800–2000) / long (>2000).
-- **Bilingual ES/EN:** only when the topic calls for it (Spanish by default).
+- **Language:** Spanish by default, or English, French, or Simplified Chinese on explicit request. Confirm the language pair for bilingual output (see `references/languages.md`).
 
 If a long conversation already makes the register and length obvious, **propose and confirm them in one line** rather than opening an interview:
 
 > "Voy a abrir un canvas de extensión media en registro canónico (unas 1.200 palabras), en español. ¿Te parece, o ajustamos?"
+
+Adapt that confirmation to the selected language. English templates below describe structure; write their prose and placeholders in the selected language. Preserve YAML keys and controlled values such as `tipo: articulo`.
 
 ### 2. Distill the conversation
 

@@ -20,6 +20,6 @@ Activate the **mindandhealth-publish** skill.
 
 5. Always apply the editorial principles: transdisciplinarity, epistemic honesty, active nuance (useful dissent), a guiding metaphor where appropriate, an ending that resonates rather than concludes, and an ethical footer at the end of the canvas.
 
-6. **Default output language: Spanish.** Conduct the conversation and produce canvases, derivatives, and image prompts in Spanish unless Pablo explicitly requests English or bilingual ES/EN output.
+6. **Default output language: Spanish.** Honor explicit requests for English, French, Simplified Chinese, or bilingual output. Keep the selected language throughout the conversation and deliverables; see `references/languages.md`.
 
 Pablo's initial context: $ARGUMENTS

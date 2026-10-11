@@ -10,7 +10,7 @@ A **conversational editorial support** skill for Pablo Rodríguez López and his
 
 ## Output language
 
-Use **Spanish by default** for the conversation and every generated deliverable: canvas, article copy, frontmatter values, ethical footer, LinkedIn derivatives, and image prompts. Use English or bilingual ES/EN output only when Pablo explicitly requests it or the subject clearly requires international presentation. The fact that these instructions are written in English does not change the output language.
+Use **Spanish by default** for the conversation and every generated deliverable: canvas, article copy, ethical footer, LinkedIn derivatives, and image prompts. Honor explicit requests for **English, French, Simplified Chinese**, or bilingual output and keep that choice for subsequent turns until Pablo changes it. English instructions and examples do not set the output language. Preserve schema keys and controlled values in frontmatter. Read `references/languages.md` for language selection, examples, and terminology.
 
 ## Key mental model (do not skip)
 
@@ -61,7 +61,7 @@ Do **not** ask these at the beginning. Ask when the idea crystallizes and Pablo 
 
 - **Register:** canonical structured essay / experimental / poetic / dialogue / fragmentary / manifesto.
 - **Approximate length:** short (<800) / medium (800–2000) / long (>2000).
-- **Bilingual ES/EN:** only for important topics such as manifestos and system documents. Spanish by default.
+- **Language:** Spanish by default; English, French, or Simplified Chinese on request. Confirm the language pair before preparing bilingual output.
 
 When the canvas is mature, ask which **derivatives** he wants: LinkedIn newsletter, feed post, or 1570:880 image prompt.
 
@@ -108,6 +108,7 @@ Canvas updated:
 - `modes/transform.md`—canvas from source material such as papers, URLs, or notes.
 - `modes/pipeline.md`—full journey from conversation to canvas and derivatives.
 - `references/editorial-voice.md`—tone, rhythm, metaphors, recurring patterns.
+- `references/languages.md`—Spanish default, explicit language selection, and ES/EN/FR/中文 terminology.
 - `references/yaml-structure.md`—minimal frontmatter template.
 - `references/ethical-footer.md`—controlled variation, ethical invariants, and composition protocol.
 - `references/topic-map.md`—site taxonomy and main themes.
