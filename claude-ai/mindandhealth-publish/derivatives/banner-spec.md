@@ -1,118 +1,122 @@
-# Derivado: Prompt de imagen 1570:880
+# Derivative: 1570:880 image prompt
 
-## Propósito
-Generar un **prompt descriptivo** que Pablo pueda pasar a su generador de imagen habitual (DALL·E, Midjourney, Gemini, etc.). El skill **no genera la imagen**; solo el prompt.
+## Purpose
 
-## Formato de la imagen objetivo
+Generate a **descriptive prompt** Pablo can send to his usual image generator (DALL·E, Midjourney, Gemini, etc.). The skill **does not generate the image**; it only writes the prompt.
 
-- **Proporción:** 1570:880 (aproximadamente 16:9, pero exacto para LinkedIn newsletter banner).
-- **Uso principal:** portada de newsletter LinkedIn.
-- **Uso secundario:** imagen de cierre o apertura del artículo Obsidian (opcional).
-- **Puede o no contener texto** (depende de la pieza; preguntar a Pablo si lo quiere).
+## Target image format
 
-## Estilo visual observado en sus imágenes previas
+- **Aspect ratio:** 1570:880 (approximately 16:9, but exact for a LinkedIn newsletter banner).
+- **Primary use:** LinkedIn newsletter cover.
+- **Secondary use:** optional closing or opening image for the Obsidian article.
+- It **may or may not contain text**; ask Pablo when unclear.
 
-Basado en los archivos del vault (`banneretico.png`, `index-portada.png`, `imagen_inicio.webp`, imágenes de poemas de Juan Haro, ilustraciones de artículos):
+## Visual style observed in earlier images
 
-- **Paletas frecuentes:** azules profundos y ámbar cálido; ocres y beiges; blanco y negro con acento de color.
-- **Registros visuales que aparecen:**
-  - Abstracto geométrico / cubista (hexágonos, fractales).
-  - Ilustración vectorial plana con textura.
-  - Fotografía editorial con tono cálido.
-  - Collage simbólico (raíces, voces, laberintos).
-- **Símbolos recurrentes:** panales/hexágonos (inteligencia colectiva), laberintos, lámparas, raíces, fragmentos, grietas de luz, árboles.
-- **Tipografías:** góticas modernas para títulos principales; sans-serif limpia para subtítulos.
+Based on vault files such as `banneretico.png`, `index-portada.png`, `imagen_inicio.webp`, images for Juan Haro poems, and article illustrations:
 
-## Plantilla del prompt
+- **Frequent palettes:** deep blue and warm amber; ochre and beige; black and white with a color accent.
+- **Visual registers:**
+  - Geometric abstraction / cubism (hexagons, fractals).
+  - Flat vector illustration with texture.
+  - Warm-toned editorial photography.
+  - Symbolic collage (roots, voices, mazes).
+- **Recurring symbols:** honeycombs/hexagons (collective intelligence), mazes, lamps, roots, fragments, cracks of light, trees.
+- **Typography:** modern Gothic for main titles; clean sans serif for subtitles.
+
+## Prompt template
 
 ```
-Imagen horizontal, proporción 1570:880, [ESTILO VISUAL].
+Horizontal image, 1570:880 aspect ratio, [VISUAL STYLE].
 
-[DESCRIPCIÓN DEL MOTIVO CENTRAL] — [símbolo/metáfora orientadora del artículo].
+[CENTRAL SUBJECT DESCRIPTION]—[the article's guiding symbol/metaphor].
 
-[PALETA DE COLOR] — [2-3 colores dominantes y cómo se distribuyen].
+[COLOR PALETTE]—[2–3 dominant colors and their distribution].
 
-[AMBIENTE / TONO]: [adjetivos: sereno, reflexivo, denso, luminoso, melancólico, sobrio…].
+[MOOD / TONE]: [serene, reflective, dense, luminous, melancholy, restrained…].
 
-[COMPOSICIÓN]: [cómo se distribuye el espacio — centrado, asimétrico, con masa a la izquierda, con horizonte bajo, etc.].
+[COMPOSITION]: [centered, asymmetric, visual mass on the left, low horizon, etc.].
 
-[TEXTO EN IMAGEN]: [o bien "sin texto", o bien "incluye el texto: '[TEXTO]' en tipografía gótica moderna, [posición]"].
+[TEXT IN IMAGE]: [either "no text" or "include the text '[TEXT]' in modern Gothic type, [position]"]
 
-Referencias estéticas: [1-2 referencias si aplican — p.ej. "ilustración vectorial plana al estilo editorial contemporáneo", "grabado digital", "fotografía editorial tonalidad cálida"].
+Aesthetic references: [1–2 where useful, e.g. contemporary flat editorial illustration, digital engraving, warm-toned editorial photography].
 
-Evitar: texto ilegible, estética de stock genérica, figuras humanas con rasgos distorsionados, exceso de elementos decorativos.
+Avoid: illegible text, generic stock imagery, distorted human features, excessive decoration.
 ```
 
-## Ejemplos concretos según tema
+## Examples by topic
 
-### Tema: ética de IA / pensamiento asistido
+### AI ethics / assisted thought
+
 ```
-Imagen horizontal, proporción 1570:880, ilustración vectorial plana con textura.
+Horizontal image, 1570:880 aspect ratio, textured flat vector illustration.
 
-Una lámpara de aceite antigua suspendida en medio de un laberinto geométrico que se extiende hacia el horizonte. La lámpara proyecta un haz de luz que ilumina solo una parte del camino.
+An antique oil lamp suspended in the middle of a geometric maze extending toward the horizon. Its beam illuminates only part of the path.
 
-Paleta: azul profundo (60% del espacio), ámbar cálido (zona iluminada), blanco roto (detalles del laberinto).
+Palette: deep blue (60% of the image), warm amber (illuminated area), off-white (maze details).
 
-Ambiente sereno, reflexivo, con tensión latente entre lo que se ve y lo que queda en sombra.
+Serene and reflective, with latent tension between what is visible and what remains in shadow.
 
-Composición: la lámpara descentrada a la izquierda, el laberinto se abre hacia la derecha como campo de interrogación.
+Composition: lamp off-center to the left; the maze opens toward the right like a field of questions.
 
-Sin texto en la imagen.
+No text.
 
-Referencias estéticas: ilustración editorial contemporánea, minimalismo simbólico.
+Aesthetic references: contemporary editorial illustration, symbolic minimalism.
 
-Evitar: texto ilegible, figuras humanas, estética de stock.
-```
-
-### Tema: esperanza / filosofía existencial
-```
-Imagen horizontal, proporción 1570:880, collage digital con textura de grabado.
-
-Una grieta vertical en un muro oscuro por la que entra un haz de luz cálida. De la grieta brota una pequeña planta.
-
-Paleta: gris-azulado oscuro dominante, luz dorada focal, verde apagado para la planta.
-
-Ambiente melancólico pero con gesto afirmativo, sin sentimentalismo.
-
-Composición: muro ocupa dos tercios, grieta vertical ligeramente a la derecha del centro, luz se proyecta hacia abajo a la izquierda.
-
-Sin texto en la imagen.
-
-Referencias estéticas: grabado simbolista, ilustración editorial sobria.
-
-Evitar: estética inspiracional genérica, tonos saturados, texto motivacional.
+Avoid: illegible text, human figures, stock imagery.
 ```
 
-### Tema: IPFS / tecnología descentralizada
+### Hope / existential philosophy
+
 ```
-Imagen horizontal, proporción 1570:880, estilo geométrico-abstracto.
+Horizontal image, 1570:880 aspect ratio, digital collage with engraved texture.
 
-Una red de nodos hexagonales interconectados que se expande desde el centro hacia los bordes. Algunos nodos están más luminosos, otros apagados, sugiriendo distribución no jerárquica.
+A vertical crack in a dark wall lets through a warm beam of light. A small plant emerges from the crack.
 
-Paleta: azul profundo de fondo, ámbar y blanco para los nodos activos.
+Palette: dominant dark blue-gray, focused golden light, muted green for the plant.
 
-Ambiente tecnológico pero con calidez humanista — no futurista frío.
+Melancholy but quietly affirmative, without sentimentality.
 
-Composición: red descentralizada, sin punto focal único, equilibrio visual entre nodos.
+Composition: wall occupies two thirds; the vertical crack sits just right of center; light falls down and to the left.
 
-Texto en imagen: "mindandhealth.org" en tipografía sans-serif delicada, esquina inferior derecha.
+No text.
 
-Referencias estéticas: cubismo digital, ilustración conceptual editorial.
+Aesthetic references: symbolist engraving, restrained editorial illustration.
 
-Evitar: estética de criptomonedas, neones, gráficos tipo stock tecnológico.
+Avoid: generic inspirational aesthetics, saturated colors, motivational text.
 ```
 
-## Preguntas para personalizar el prompt
+### IPFS / decentralized technology
 
-Antes de redactar el prompt, pregunta a Pablo (solo si no queda claro del artículo):
+```
+Horizontal image, 1570:880 aspect ratio, geometric-abstract style.
 
-1. ¿Quieres **texto en la imagen**? Si sí, ¿qué texto y en qué idioma?
-2. ¿Algún **símbolo o motivo** concreto que quieras que aparezca (siguiendo la metáfora orientadora del artículo)?
-3. ¿**Paleta** preferida para esta pieza, o libre?
-4. ¿**Registro visual**: ilustración / fotografía editorial / abstracto / collage / grabado?
+A network of interconnected hexagonal nodes expands from the center toward the edges. Some nodes glow while others are dim, suggesting non-hierarchical distribution.
 
-Si Pablo dice "tú decide", elige según el tema y los ejemplos anteriores.
+Palette: deep-blue background, amber and white active nodes.
 
-## Entrega
+Technological yet humanly warm—not cold futurism.
 
-Entregar **solo el prompt**, en un bloque de código, listo para copiar/pegar. No generar variantes múltiples salvo que lo pida.
+Composition: decentralized network with no single focal point; balanced visual weight among nodes.
+
+Text: "mindandhealth.org" in delicate sans-serif type at the bottom right.
+
+Aesthetic references: digital cubism, conceptual editorial illustration.
+
+Avoid: cryptocurrency aesthetics, neon, generic technology stock graphics.
+```
+
+## Questions for customization
+
+Ask Pablo only when the article does not make these clear:
+
+1. Do you want **text in the image**? If so, what text and in which language?
+2. Should a particular **symbol or motif** appear, following the article's guiding metaphor?
+3. Is there a preferred **palette**, or should I choose freely?
+4. Which **visual register**: illustration, editorial photography, abstract, collage, or engraving?
+
+If Pablo says "you decide," choose based on the topic and examples above.
+
+## Delivery
+
+Return **only the prompt** in a code block, ready to copy and paste. Do not generate multiple variants unless requested.

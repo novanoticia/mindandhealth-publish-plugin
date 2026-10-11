@@ -1,35 +1,50 @@
 # Changelog
 
-Todos los cambios relevantes del plugin/skill `mindandhealth-publish` se documentan aquí. Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versionado [SemVer](https://semver.org/lang/es/) (mayor = ruptura, menor = ampliación, parche = correcciones).
+All notable changes to `mindandhealth-publish` are documented here. This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
+
+## [Unreleased]
+
+### Changed
+
+- Translated the repository documentation, plugin metadata, command, skill instructions, examples, and bundled chat distribution into English.
+- Repository instructions are in English, while Spanish remains the default language for conversations, canvases, derivatives, and image prompts. English or bilingual ES/EN output is available on request.
+- Renamed Spanish internal guide filenames to English and updated all references.
 
 ## [1.2.0] — 2026-08-19
 
-### Cambiado
-- **La variante de chat pasa a llamarse `mindandhealth-publish-chat`** (`claude-ai/mindandhealth-publish/SKILL.md`). Antes las dos variantes del repositorio declaraban `name: mindandhealth-publish`, lo que hace que cualquier herramienta que recorra el repositorio completo (conversores, empaquetadores, validadores) aborte por conflicto de nombre: dos skills no pueden reclamar el mismo nombre publicado. La variante de plugin conserva `mindandhealth-publish`, de modo que el marketplace, el slash command `/publish` y las instalaciones existentes de Claude Code no se ven afectados.
-- Bundle `mindandhealth-publish-claude-ai.zip` regenerado: la carpeta interna pasa de `mindandhealth-publish/` a `mindandhealth-publish-chat/`.
-- README: nueva tabla «Las dos variantes», árbol de arquitectura anotado con el `name` de cada una y ruta de Mistral actualizada.
+### Changed
 
-### Migración
-- **Claude.ai / Perplexity / Mistral:** desinstala el skill anterior y vuelve a subir el bundle. Aparecerá como `mindandhealth-publish-chat`. Los gatillos en lenguaje natural no cambian.
-- **Claude Code:** nada que hacer.
+- Renamed the chat variant to `mindandhealth-publish-chat`. The plugin variant remains `mindandhealth-publish`, preventing duplicate published skill names while preserving marketplace and `/publish` compatibility.
+- Regenerated `mindandhealth-publish-claude-ai.zip` with an internal `mindandhealth-publish-chat/` folder.
+- Added documentation for the two variants and updated the Mistral path.
 
-### Notas
-- Sin cambios de comportamiento del skill en ninguna de las dos variantes.
-- Las dos copias siguen manteniéndose a mano y han divergido en cuatro archivos (`SKILL.md`, `modes/generate.md`, `modes/transform.md`, `references/mapa-tematico.md`). Parte de esa divergencia es deliberada (acceso al vault) y parte es deriva. Pendiente: generar la variante de chat desde la de plugin con un script de build.
+### Migration
+
+- **Claude.ai / Perplexity / Mistral:** uninstall the prior skill and upload the bundle again. It appears as `mindandhealth-publish-chat`; natural-language triggers are unchanged.
+- **Claude Code:** no action required.
+
+### Notes
+
+- No behavior changes.
+- The plugin and chat copies still differ where required by vault access. A future build script should generate the chat variant from the plugin source.
 
 ## [1.1.0] — 2026-06-10
 
-### Añadido
-- Compatibilidad de instalación del skill con **Mistral AI** (espacio *Work*): descomprimir el bundle y seleccionar la carpeta `mindandhealth-publish/`. Documentada en el README.
+### Added
 
-### Cambiado
-- **`claude-ai/mindandhealth-publish/SKILL.md` — `description` reducida a 453 caracteres / 458 bytes** (antes 708) para cumplir el límite de 500 caracteres que aplica Mistral, conservando los gatillos de activación en lenguaje natural; pasa a bloque escalar YAML (`>-`). Bundle `mindandhealth-publish-claude-ai.zip` regenerado.
-- README: nota técnica actualizada con los límites por plataforma (Perplexity 1024 bytes, Mistral 500 caracteres).
+- Mistral AI installation support through its **Work** space.
 
-### Notas
-- Sin cambios de comportamiento del skill; el salto refleja la ampliación de plataformas soportadas.
+### Changed
 
-## [1.0.0] — versión inicial
+- Shortened the chat variant's description to fit Mistral's 500-character limit and regenerated the bundle.
+- Documented the Perplexity and Mistral description limits.
 
-### Añadido
-- Skill de acompañamiento editorial conversacional para mindandhealth.org (Obsidian Publish): modos, derivados (newsletter LinkedIn, post de feed, prompt de imagen) y pie ético de variación controlada. Disponible como plugin de Claude Code y como bundle subible a Claude.ai y Perplexity.
+### Notes
+
+- No skill behavior changes; the minor release reflects expanded platform support.
+
+## [1.0.0] — Initial release
+
+### Added
+
+- Conversational editorial support for mindandhealth.org, including modes, LinkedIn derivatives, an image prompt, and a controlled-variation ethical footer. Released as both a Claude Code plugin and an uploadable chat skill.

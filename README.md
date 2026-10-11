@@ -1,239 +1,187 @@
 # mindandhealth-publish-plugin
 
-Plugin de Claude Code para **acompañamiento editorial conversacional** de las publicaciones de [mindandhealth.org](https://mindandhealth.org) (Obsidian Publish).
+A Claude Code plugin providing **conversational editorial support** for [mindandhealth.org](https://mindandhealth.org) publications on Obsidian Publish.
 
-> **Compatible con [Agent Plugins 1.0.0](https://agent-plugins.org/specification)** — el formato portátil de empaquetado de la Agentic AI Foundation (OpenAI, Amazon,
-> Microsoft, Cursor y Vercel, con Google como *core maintainer*).
-> El paquete lleva el manifiesto portable `plugin.json` en la raíz del plugin y
-> el skill en `plugins/mindandhealth-publish/skills/mindandhealth-publish/SKILL.md`, así que cualquier cliente conformante lo descubre.
+> **Compatible with [Agent Plugins 1.0.0](https://agent-plugins.org/specification)**, the portable packaging format of the Agentic AI Foundation. The package contains a portable `plugin.json` manifest and an Agent Skills-compatible `SKILL.md`.
 >
-> **Funciona en ChatGPT.** El skill es texto: instrucciones y criterios, sin
-> ejecución local, así que se instala activando **Work** en el selector de ChatGPT y
-> añadiéndolo desde **Complementos**, por nombre o por la URL de este repositorio.
-> Funciona igual que en Claude. Su frontmatter
-> valida contra el conjunto cerrado de [Agent Skills](https://agentskills.io/specification),
-> que es lo que ChatGPT, claude.ai y la Skills API exigen para aceptar la subida
-> —una clave de más ahí no se ignora, falla con error duro—. Están también en el
-> **plan gratuito**, con límites de uso.
+> **Also works in ChatGPT.** The skill consists only of instructions and editorial criteria, with no local execution. Add it from **Plugins** after enabling **Work** in the ChatGPT selector. It is also available on the free plan, subject to usage limits.
 
-No es un redactor automático. Es un interlocutor: conversa primero, destila cuando la idea cristaliza, genera derivados (LinkedIn + prompt de imagen) bajo petición. **Todo vive en el chat; nunca toca el vault.**
+This is not an automatic article writer. It is a thinking partner: it converses first, distills an article when the idea crystallizes, and creates LinkedIn or image-prompt derivatives on request. **Everything stays in chat; the vault is never modified.**
 
----
+The repository instructions are written in English, but the skill's **default output language is Spanish**. It switches to English or bilingual ES/EN output only when Pablo requests it or the subject explicitly calls for it.
 
-## Modelo mental
+## Mental model
 
-Los artículos de Pablo **no se piden, emergen**. El flujo que asume el skill:
+Pablo's articles **are not commissioned; they emerge**:
 
-1. **Conversación exploratoria** (modo por defecto). Tema, intuición, duda, lectura. Se cruzan perspectivas, se matiza, se contraargumenta. Rol del asistente: interlocutor, no redactor.
-2. **Punto de cristalización.** Pablo pide canvas — o el asistente lo sugiere una sola vez, sin insistir, cuando detecta materia.
-3. **Canvas.** Un bloque markdown vivo en el chat con lo destilado. No es un archivo en disco.
-4. **Iteración.** Pablo comenta, pide, sugiere. El canvas se actualiza solo en los carriles "Petición" y "Sugerencia aprobada".
-5. **Cierre.** Pablo copia manualmente el canvas a su vault de Obsidian. Si procede, se generan derivados.
+1. **Exploratory conversation** (default mode). A topic, intuition, doubt, or reading is examined from different perspectives. The assistant is a thinking partner, not a writer.
+2. **Crystallization.** Pablo asks for a canvas, or the assistant suggests one once when enough material has emerged.
+3. **Canvas.** A living Markdown block in chat containing what the conversation has distilled. It is not a disk file.
+4. **Iteration.** Pablo comments, requests, and suggests. The canvas changes only for direct requests and approved suggestions.
+5. **Closure.** Pablo manually copies the final canvas to his Obsidian vault. Derivatives can then be generated.
 
----
+## What it never does
 
-## Qué NO hace (crítico)
+- Write to the vault or any file on disk.
+- Use editing tools to save drafts.
+- Generate the final `🔖 **Tags:**` block; Pablo's Obsidian template adds it.
+- Generate the co-authorship YAML block; Pablo's Tagger GPT adds it.
+- Generate images; it produces descriptive prompts only.
+- Publish anything.
+- Rush into drafting during the opening stages of a conversation.
 
-- **Nunca** escribe en el vault ni en ningún archivo de disco. Todo el trabajo vive en la conversación.
-- **Nunca** usa `Edit` o `Write` para guardar borradores.
-- **No** genera las etiquetas `🔖 **Etiquetas:**` — las pone Pablo con plantilla de Obsidian.
-- **No** genera el bloque YAML de coautoría — lo produce el GPT Tagger.
-- **No** genera imágenes — solo prompts descriptivos bajo petición.
-- **No** publica nada.
-- **No** precipita hacia la redacción cuando la conversación apenas empieza.
+## What it does
 
-## Qué SÍ hace
+- Converses as a transdisciplinary thinking partner, offering perspective, counterargument, references, metaphors, and questions.
+- Opens an Obsidian-compatible Markdown canvas, with minimal YAML and an ethical footer, after the idea crystallizes.
+- Iterates the canvas through a clear conversational protocol.
+- Creates a LinkedIn newsletter, LinkedIn feed post, and 1570:880 image prompt on request.
+- In the Claude Code variant, reads the vault when asked to propose verified internal links.
 
-- Conversa como interlocutor transdisciplinar: perspectiva, contraargumento, referencia, metáfora candidata, pregunta devolutiva.
-- Cuando se cristaliza y Pablo acepta: abre canvas con YAML mínimo, cuerpo Obsidian-compatible y pie ético al cierre.
-- Itera el canvas según los carriles conversacionales (ver tabla más abajo).
-- Bajo petición: derivados (newsletter LinkedIn, post feed, prompt imagen 1570:880).
-- Bajo petición: propuestas de enlaces internos a artículos previos del vault (solo lectura).
+## Two variants
 
----
-
-## Las dos variantes
-
-El repositorio contiene **dos variantes del mismo skill**, con nombres distintos para que no colisionen:
-
-| Variante | Ruta | `name` | Entorno |
+| Variant | Path | `name` | Environment |
 |---|---|---|---|
-| Plugin | `plugins/mindandhealth-publish/skills/mindandhealth-publish/` | `mindandhealth-publish` | Claude Code / Claude Desktop → Code. Puede **leer** el vault (`Read`, `Grep`, `WebFetch`) y ofrece `/publish`. |
-| Chat | `claude-ai/mindandhealth-publish/` (y el `.zip`) | `mindandhealth-publish-chat` | Claude.ai, Perplexity, Mistral, ChatGPT. Sin acceso a disco: el material se aporta en la conversación. |
+| Plugin | `plugins/mindandhealth-publish/skills/mindandhealth-publish/` | `mindandhealth-publish` | Claude Code / Claude Desktop Code. Can read the vault and provides `/publish`. |
+| Chat | `claude-ai/mindandhealth-publish/` and the `.zip` bundle | `mindandhealth-publish-chat` | Claude.ai, Perplexity, Mistral, and ChatGPT. No disk access; source material must be supplied in chat. |
 
-No instales las dos a la vez en el mismo entorno: hacen lo mismo y se pisarían los gatillos.
+Do not install both variants in the same environment: they serve the same purpose and their triggers may overlap.
 
----
+## Installation
 
-## Instalación
+### Claude Code and Claude Desktop Code
 
-Hay tres formas de instalar el skill según dónde quieras usarlo.
-
-### Claude Code (CLI) y Claude Desktop → pestaña Code
-
-Añadir el marketplace y activar el plugin:
+Add the marketplace and install the plugin:
 
 ```bash
 /plugin marketplace add novanoticia/mindandhealth-publish-plugin
 /plugin install mindandhealth-publish@mindandhealth-publish-plugin
 ```
 
-Una vez activo, dispones del slash command `/publish` y de los disparadores en lenguaje natural.
+This enables the `/publish` command and natural-language triggers.
 
-### Claude.ai (Claude Chat) — versión empaquetada como skill
+### Claude.ai
 
-Para usarlo en la web/app de Claude.ai:
+1. Download [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip). Its readable source is in [`claude-ai/mindandhealth-publish/`](./claude-ai/mindandhealth-publish/).
+2. In Claude.ai, open your avatar → **Settings** → **Capabilities** → **Skills** → **Upload skill**.
+3. Upload the ZIP and enable the skill.
 
-1. Descarga el bundle: [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip) (≈33 KB).
-   Contiene la carpeta `mindandhealth-publish-chat/`. Versión legible del contenido en [`claude-ai/mindandhealth-publish/`](./claude-ai/mindandhealth-publish/).
-2. En claude.ai: tu avatar (arriba a la derecha) → **Settings** → **Capabilities** → **Skills** → **Upload skill**.
-3. Sube el zip y activa el toggle.
+Invoke it in natural language: "let's publish something about X," "open a canvas," or "make a newsletter from the latest article."
 
-A partir de ahí se invoca en **lenguaje natural** ("publiquemos sobre X", "pensemos sobre Y para la web", "saca canvas", "haz la newsletter del último artículo"…). Claude.ai mostrará una insignia indicando que está usando el skill.
+> Custom skills require a **Max**, **Team**, or **Enterprise** plan with Skills enabled.
 
-> **Requiere** plan **Max**, **Team** o **Enterprise** con Skills personalizadas habilitadas.
+### Perplexity
 
-**Diferencias respecto a la versión Claude Code:** se llama **`mindandhealth-publish-chat`** (nombre distinto para que las dos variantes puedan convivir en el mismo repositorio sin colisionar), no incluye slash command `/publish` (Claude.ai no lo soporta) y no lee el vault local de Obsidian; los enlaces internos solo se proponen si Pablo aporta los títulos o el texto de artículos previos en el chat. Todo lo demás (flujo, principios, modos, derivados, pie ético de variación controlada) es idéntico.
+1. Download [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
+2. Open **Skills** management and choose **Upload / Import skill**.
+3. Upload the ZIP and activate it.
 
-### Perplexity (Skills)
+### Mistral AI
 
-Perplexity admite el mismo bundle que Claude.ai, sin pasos adicionales:
+1. Download and extract [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
+2. In the Mistral **Work** space, open **Skills**.
+3. Select the extracted `mindandhealth-publish-chat/` folder containing `SKILL.md`.
 
-1. Descarga [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip).
-2. En Perplexity, entra en la gestión de **Skills** y elige **subir / importar skill**.
-3. Sube el zip y actívalo.
+> **Description limits:** Perplexity validates the field as UTF-8 bytes with a 1,024-byte limit; Mistral imposes a 500-character limit. Keep the chat variant's description below 500 characters.
 
-Se invoca en **lenguaje natural**, igual que en Claude.ai (sin slash command `/publish`). Aplican las mismas diferencias respecto a la versión Claude Code señaladas arriba.
-
-> **Nota técnica:** el límite de longitud del campo `description` depende de la plataforma: Perplexity valida **en bytes UTF-8** (límite 1024) y Mistral **en caracteres** (límite 500). En español, los acentos y la `ñ` cuentan como 2 bytes. La descripción de este skill mide **453 caracteres / 458 bytes**, dentro de ambos umbrales. Si la editas, no superes los **500 caracteres** para conservar la compatibilidad con Mistral.
-
----
-
-### Mistral AI (Skills)
-
-Mistral admite el mismo bundle, instalado desde su espacio **Work**:
-
-1. Descarga [`mindandhealth-publish-claude-ai.zip`](./mindandhealth-publish-claude-ai.zip) y **descomprímelo**.
-2. En Mistral AI, dentro del espacio **Work**, abre la sección de **Skills**.
-3. Selecciona la **carpeta** resultante (`mindandhealth-publish-chat/`, la que contiene `SKILL.md`).
-
-Se invoca en **lenguaje natural**, igual que en Claude.ai y Perplexity (sin slash command `/publish`).
-
-## Uso
+## Usage
 
 ### Slash command
 
+```text
+/publish [optional context]
 ```
-/publish [contexto opcional]
-```
 
-- **Sin argumento** → entra en modo conversar. Pregunta qué traes hoy.
-- **Tema / intuición / pregunta abierta** → conversa con ese tema como punto de partida.
-- **Borrador pegado** → entra en modo refinar (diagnóstico breve primero).
-- **URL / cita / material fuente** → entra en modo transformar (inventario de fuentes primero).
-- **Petición explícita** ("abre canvas con…", "dame la newsletter de…") → salta al modo correspondiente.
+- **No argument** → enter converse mode and ask what Pablo brings today.
+- **Topic / intuition / open question** → begin a conversation without imposing a structure.
+- **Pasted draft** → enter refine mode, starting with a brief diagnosis.
+- **URL / quotation / source material** → enter transform mode, starting with a source inventory.
+- **Explicit request** → go directly to the relevant canvas or derivative mode.
 
-### Lenguaje natural
+Natural-language examples:
 
-También se activa con frases como:
+- "Let's think about X."
+- "This idea has been on my mind."
+- "What do you think about…?"
+- "Help me polish this draft."
+- "Open a canvas from our discussion."
+- "Make a newsletter from the latest article."
+- "Give me an image prompt for this post."
 
-- "pensemos sobre X"
-- "me ronda esta idea"
-- "¿qué opinas de…?"
-- "ayúdame a pulir este borrador"
-- "saca canvas con lo que llevamos"
-- "haz la newsletter del último artículo"
-- "dame el prompt de imagen para este post"
+## Canvas iteration protocol
 
----
-
-## Protocolo de iteración (cuando hay canvas)
-
-| Carril | Señal | Respuesta |
+| Lane | Signal | Response |
 |---|---|---|
-| **Pregunta** | "¿qué opinas de §2?" | Responde en chat. No reedita el canvas. |
-| **Sugerencia** | "¿y si…?" | Evalúa; si hay acuerdo, aplica y devuelve canvas actualizado. |
-| **Petición** | "cambia X" | Aplica y devuelve canvas actualizado (con diff breve). |
-| **Exploración** | "dame tres aperturas" | Variantes en chat. No reedita el canvas. |
-| **Conversación paralela** | "por cierto…" | Vuelve a modo conversar sin cerrar canvas. |
-| **Validación** | "déjalo así" | Fija estado. Propone siguiente hito. |
-| **Pausa** | "déjame pensarlo" | Reporta estado y se detiene. |
+| **Question** | "What do you think of §2?" | Answer in chat; do not re-edit the canvas. |
+| **Suggestion** | "What if…?" | Evaluate it; if approved, apply it and return the canvas. |
+| **Request** | "Change X" | Apply it and return the canvas with a brief diff. |
+| **Exploration** | "Give me three openings" | Offer variants in chat without changing the canvas. |
+| **Parallel conversation** | "By the way…" | Return to converse mode without closing the canvas. |
+| **Validation** | "Leave it like that" | Fix the state and suggest the next milestone. |
+| **Pause** | "Let me think about it" | Report the state and stop. |
 
-Solo **Petición** y **Sugerencia aprobada** devuelven canvas actualizado. En los demás carriles, conversación sin reedición.
+Only **Request** and **Approved suggestion** return an updated canvas.
 
----
+## Editorial principles
 
-## Principios editoriales
+1. **Transdisciplinarity.** Connect technology and the humanities.
+2. **Epistemic honesty.** Preserve uncertainty and provisional choices.
+3. **Active nuance.** Include useful dissent and productive tension; avoid dogmatism.
+4. **Guiding metaphor.** Use a concrete, sensory, restrained metaphor when appropriate.
+5. **Reflective ending.** End with an open question or small gesture, not a closed conclusion.
+6. **Ethical footer.** Always place a freshly written footer at the end of the article body.
+7. **In-chat canvas.** Never save it to disk.
 
-1. **Transdisciplinariedad.** Cruce entre técnica y humanidades.
-2. **Honestidad epistémica.** "me quedo con la pregunta", "sospecho que…", "elección provisional".
-3. **Matiz activo.** Disidencia útil, contraargumento, tensión productiva. Evitar dogmatismo.
-4. **Metáfora orientadora.** Concreta, sensorial, sin estrépito. Cuando el tema lo pida.
-5. **Cierre reflexivo, no conclusivo.** Pregunta abierta o gesto pequeño; no "en conclusión".
-6. **Pie ético** al final del cuerpo, antes del divisor de Navegación. Siempre.
-7. **Canvas vive en el chat.** Nunca en disco.
+## Architecture
 
----
-
-## Arquitectura del skill
-
-```
+```text
 mindandhealth-publish-plugin/
-├── plugins/mindandhealth-publish/       # Versión Claude Code — name: mindandhealth-publish
-│   ├── .claude-plugin/plugin.json
+├── plugins/mindandhealth-publish/       # Claude Code variant
+│   ├── plugin.json
 │   └── skills/mindandhealth-publish/
-│       ├── SKILL.md                     # Orquestador y flujo
+│       ├── SKILL.md                     # Orchestrator and flow
 │       ├── modes/
-│       │   ├── conversar.md             # Modo por defecto
-│       │   ├── generate.md              # Volcado inicial a canvas
-│       │   ├── refine.md                # Pulido de borrador aportado
-│       │   ├── transform.md             # Canvas desde fuente (paper, URL, notas)
-│       │   └── pipeline.md              # Recorrido completo conversación → derivados
+│       │   ├── converse.md                 # Default mode
+│       │   ├── generate.md                 # Initial canvas
+│       │   ├── refine.md                   # Polish a supplied draft
+│       │   ├── transform.md                # Canvas from source material
+│       │   └── pipeline.md                 # Full journey
 │       ├── references/
-│       │   ├── voz-editorial.md         # Tono, ritmo, metáforas
-│       │   ├── estructura-yaml.md       # Frontmatter mínimo
-│       │   ├── pie-etico.md             # Variación controlada del pie
-│       │   ├── mapa-tematico.md         # Taxonomía del sitio
-│       │   └── modo-iterativo-canvas.md # Carriles, hitos, anti-patrones
+│       │   ├── editorial-voice.md
+│       │   ├── yaml-structure.md
+│       │   ├── ethical-footer.md
+│       │   ├── topic-map.md
+│       │   └── iterative-canvas-mode.md
 │       └── derivatives/
-│           ├── linkedin-newsletter.md   # Artículo → newsletter
-│           ├── linkedin-feed.md         # Newsletter → post feed
-│           └── banner-spec.md           # Prompt imagen 1570:880
-├── claude-ai/mindandhealth-publish/     # Versión chat — name: mindandhealth-publish-chat
-│                                        # (mismo contenido, sin slash command ni acceso al vault)
-├── mindandhealth-publish-claude-ai.zip  # Bundle listo para subir a Claude.ai → Settings → Skills
-├── commands/publish.md                  # Slash command /publish (solo Claude Code)
-└── .claude-plugin/marketplace.json      # Manifest del marketplace
+│           ├── linkedin-newsletter.md
+│           ├── linkedin-feed.md
+│           └── banner-spec.md
+├── claude-ai/mindandhealth-publish/     # Chat variant
+├── mindandhealth-publish-claude-ai.zip # Upload-ready chat bundle
+├── commands/publish.md                  # Claude Code slash command
+└── .claude-plugin/marketplace.json      # Marketplace manifest
 ```
 
----
+## Vault access (Claude Code only)
 
-## Vault (solo lectura)
+The plugin may **read** Markdown files in the vault to extract patterns, propose internal links, or verify citations. The default path is:
 
-El skill puede **leer** los `.md` del vault para extraer patrones, proponer enlaces internos o verificar citas. Ruta por defecto:
-
-```
+```text
 ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Pablo's Vault/website/
 ```
 
-Ajustable en `plugins/mindandhealth-publish/skills/mindandhealth-publish/references/mapa-tematico.md`. **Nunca escribe en esa ruta.**
+Change it in `plugins/mindandhealth-publish/skills/mindandhealth-publish/references/topic-map.md`. The plugin **never writes to this path**.
 
----
+## Available derivatives
 
-## Derivados disponibles
+- **LinkedIn newsletter**—extended adaptation with its own opening.
+- **LinkedIn feed post**—short version derived from the newsletter.
+- **1570:880 image prompt**—banner description only; it does not generate an image.
 
-Bajo petición, a partir de un canvas maduro o un artículo ya publicado:
-
-- **Newsletter LinkedIn** — adaptación extendida con apertura propia.
-- **Post feed LinkedIn** — versión corta derivada de la newsletter.
-- **Prompt de imagen 1570:880** — descripción para banner (no genera imagen; solo el prompt).
-
----
-
-## Autor
+## Author
 
 **Pablo Rodríguez López** — [mindandhealth.org](https://mindandhealth.org)
 
-## Licencia
+## License
 
 Apache-2.0

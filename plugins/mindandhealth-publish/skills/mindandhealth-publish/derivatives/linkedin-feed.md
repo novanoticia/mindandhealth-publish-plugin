@@ -1,70 +1,75 @@
-# Derivado: Post de feed LinkedIn
+# Derivative: LinkedIn feed post
 
-## Propósito
-El post corto que acompaña la publicación de la newsletter en el feed de LinkedIn. Sirve para anunciar la newsletter + invitar a leer + iniciar conversación.
+## Purpose
 
-## Formato LinkedIn feed
+A short post accompanying newsletter publication in the LinkedIn feed. It announces the newsletter, invites people to read, and starts a conversation.
 
-- **Extensión:** 800–1300 caracteres (antes del "ver más").
-- **Primeras 3 líneas son críticas:** se ven sin expandir. Son el gancho.
-- **Sin emojis** (coherente con voz editorial Pablo).
-- **Párrafos muy cortos** (1–2 líneas cada uno) separados por salto en blanco.
-- **Sin hashtags al inicio.** Si se incluyen, **3–5 hashtags al final**, no más.
+## LinkedIn feed format
 
-## Estructura tipo
+- **Length:** 800–1,300 characters.
+- **The first three lines are critical:** they appear before expansion and form the hook.
+- **No emojis**, consistent with Pablo's editorial voice.
+- **Very short paragraphs** of 1–2 lines, separated by blank lines.
+- **No opening hashtags.** If used, place **3–5 hashtags at the end**.
+
+## Typical structure
 
 ```
-[Línea 1: afirmación provocadora o pregunta, 1 frase]
+[Line 1: provocative claim or question, one sentence]
 
-[Línea 2: contrapeso o matización, 1 frase]
+[Line 2: counterweight or nuance, one sentence]
 
-[Línea 3-4: desarrollo del tema, contexto]
+[Lines 3–4: topic and context]
 
-[Línea 5-6: tesis o insight central]
+[Lines 5–6: thesis or central insight]
 
-[Línea 7-8: invitación a profundizar]
+[Lines 7–8: invitation to go deeper]
 
-Acabo de publicar una nueva entrega de la newsletter de mindandhealth.org:
-"[Título de la newsletter]"
+I have just published a new issue of the mindandhealth.org newsletter:
+"[Newsletter title]"
 
-→ [URL de la newsletter LinkedIn]
+→ [LinkedIn newsletter URL]
 
-¿Cómo lo ves tú?
+How do you see it?
 
-#EticaDigital #IA #PensamientoCritico [1-2 más según tema]
+#DigitalEthics #AI #CriticalThinking [1–2 more for the topic]
 ```
 
-## Variantes de apertura (según el tema)
+## Opening variants
 
-### Si el tema es reflexivo/filosófico
-"Hay una pregunta que me ronda desde hace semanas: [pregunta]."
+### Reflective / philosophical
 
-### Si el tema es de actualidad (IA, políticas, noticias)
-"[Hecho concreto, fecha]. No es un detalle menor."
+"A question has been on my mind for weeks: [question]."
 
-### Si el tema es personal (SAPAME, reflexión autobiográfica)
-"[Anécdota o escena mínima, 1 frase]. [Qué me hizo pensar]."
+### Current affairs
 
-### Si el tema es técnico (IPFS, informática)
-"[Afirmación técnica] — pero el problema no es técnico."
+"[Concrete fact and date]. It is not a minor detail."
 
-## Reglas de tono
+### Personal
 
-- Mantener honestidad epistémica: "sospecho", "me pregunto", "quizá".
-- Matizar siempre: no afirmar cosas rotundas en LinkedIn.
-- No vender, invitar.
-- La pregunta final debe ser **genuina**, no retórica.
+"[Minimal scene or anecdote]. [What it made me think about]."
 
-## Hashtags frecuentes de Pablo (referencia)
+### Technical
 
-`#EticaIA` `#IAResponsable` `#PensamientoCritico` `#SaludMental` `#CoautoriaHumanoIA` `#MindAndHealth` `#TransparenciaDigital` `#FilosofiaDigital` `#SAPAME` `#IPFS`
+"[Technical claim]—but the problem is not technical."
 
-Elegir 3–5 acordes al tema. Mejor menos y relevantes que muchos y genéricos.
+## Tone rules
 
-## Anti-patrones
+- Preserve epistemic honesty: "I suspect," "I wonder," "perhaps."
+- Always add nuance; avoid categorical claims.
+- Invite rather than sell.
+- The closing question must be **genuine**, not rhetorical.
 
-- ❌ "Acabo de publicar…" en la línea 1. Va al final, como CTA.
-- ❌ Emojis decorativos (✨🚀💡).
-- ❌ "Thread 🧵", "Hot take", "Unpopular opinion".
-- ❌ Hashtags al principio o mezclados en el texto.
-- ❌ Más de 1 enlace — solo el de la newsletter.
+## Pablo's frequent hashtags
+
+`#AIEthics` `#ResponsibleAI` `#CriticalThinking` `#MentalHealth` `#HumanAICoauthorship` `#MindAndHealth` `#DigitalTransparency` `#DigitalPhilosophy` `#SAPAME` `#IPFS`
+
+Choose 3–5 that fit the topic. Fewer relevant tags are better than many generic ones.
+
+## Anti-patterns
+
+- ❌ "I have just published…" on line 1; it belongs near the end as the call to action.
+- ❌ Decorative emojis.
+- ❌ "Thread," "hot take," or "unpopular opinion."
+- ❌ Hashtags at the beginning or mixed into the prose.
+- ❌ More than one link—use only the newsletter link.

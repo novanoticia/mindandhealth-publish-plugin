@@ -1,65 +1,73 @@
-# Modo: generate (volcado inicial de canvas)
+# Mode: generate (initial canvas draft)
 
-## Cuándo usar
-Hay que abrir un **canvas por primera vez**, típicamente porque:
-- Venimos de una conversación exploratoria que ha cristalizado y Pablo ha aceptado abrir canvas.
-- Pablo pide directamente "saca canvas sobre X" saltándose la conversación previa.
+## When to use it
 
-## Recordatorio crítico
+Open a **canvas for the first time**, typically because:
 
-**El canvas es un bloque markdown en el chat. Nunca un archivo en disco. Nunca en el vault.** Ver `references/modo-iterativo-canvas.md`.
+- An exploratory conversation has crystallized and Pablo has agreed to open a canvas.
+- Pablo directly asks to "open a canvas about X," skipping the prior conversation.
 
-## Pasos
+## Critical reminder
 
-### 1. Confirmar forma antes de redactar
-Cuando se cristaliza (o Pablo pide canvas directo), antes de volcar el borrador preguntar brevemente:
+**The canvas is a Markdown block in chat. Never a file on disk. Never in the vault.** See `references/iterative-canvas-mode.md`.
 
-- **Registro:** canónico (ensayo H2) / poético / fragmentario / diálogo / manifiesto.
-- **Extensión orientativa:** breve (<800) / medio (800–2000) / largo (>2000).
-- **Bilingüe ES/EN:** solo si tema lo pide (por defecto español).
+## Steps
 
-Si venimos de conversación larga, muchas veces ya es evidente el registro y la extensión — entonces **proponer y confirmar en una línea**, no abrir interrogatorio:
+### 1. Confirm the form before drafting
 
-> "Voy a sacar canvas en registro canónico, medio (unas 1200 palabras), en español. ¿Te parece, o ajustamos?"
+When the idea crystallizes (or Pablo asks directly for a canvas), briefly confirm:
 
-### 2. Destilar lo conversado (si venimos de conversación)
-Antes de redactar, tener claro en la cabeza:
-- **Tesis emergente** (una frase).
-- **Ideas fuerza** (3–4).
-- **Metáforas o imágenes** que hayan circulado.
-- **Citas o referencias** mencionadas por Pablo (a preservar).
-- **Desacuerdos productivos** surgidos (pueden ser la disidencia útil del artículo).
-- **Direcciones descartadas** (no volver a proponerlas).
+- **Register:** canonical (H2 essay) / poetic / fragmentary / dialogue / manifesto.
+- **Approximate length:** short (<800) / medium (800–2000) / long (>2000).
+- **Bilingual ES/EN:** only when the topic calls for it (Spanish by default).
 
-### 3. Enlaces internos (opcional, solo si Pablo aporta material)
-Si Pablo pega títulos o fragmentos de artículos previos del vault, identificar 2–4 afines que se puedan proponer como enlaces internos. **Sin acceso al vault**, no inventar enlaces — solo proponer los que Pablo confirme que existen.
+If a long conversation already makes the register and length obvious, **propose and confirm them in one line** rather than opening an interview:
 
-### 4. Proponer estructura (antes del volcado completo)
-Antes de volcar el canvas completo, presentar una **estructura breve** (6–10 líneas):
+> "Voy a abrir un canvas de extensión media en registro canónico (unas 1.200 palabras), en español. ¿Te parece, o ajustamos?"
+
+### 2. Distill the conversation
+
+Before drafting, identify:
+
+- **Emerging thesis** (one sentence).
+- **Core ideas** (3–4).
+- **Metaphors or images** that circulated.
+- **Quotations or references** Pablo mentioned and wants preserved.
+- **Productive disagreements** that could supply the article's useful dissent.
+- **Discarded directions** that should not be proposed again.
+
+### 3. Consider internal links (optional)
+
+This chat version cannot access the local vault. If Pablo supplies titles or text from earlier articles, identify 2–4 related pieces that could become internal links. Otherwise, omit them rather than inventing links.
+
+### 4. Propose a structure
+
+Before producing the full canvas, present a **short outline** (6–10 lines):
 
 ```
-Título tentativo: ...
-Metáfora orientadora: ... (o: sin metáfora explícita)
-Estructura:
-  - Apertura (epígrafe / blockquote / pregunta)
+Working title: ...
+Guiding metaphor: ... (or: no explicit metaphor)
+Structure:
+  - Opening (epigraph / blockquote / question)
   - H2 1: ...
   - H2 2: ...
   - H2 3: ...
-  - Cierre reflexivo
-Enlaces internos propuestos: ... (2–4 artículos del vault, si Pablo los ha mencionado)
+  - Reflective ending
+Suggested internal links: ... (2–4 vault articles)
 ```
 
-Esperar visto bueno o ajustes de Pablo. **Esto evita reescrituras grandes.**
+Wait for Pablo's approval or adjustments. **This prevents major rewrites.**
 
-### 5. Volcar el canvas
-Entregar el canvas completo como bloque markdown:
+### 5. Produce the canvas
+
+Return the complete canvas as a Markdown block:
 
 ````
 ```markdown
 ---
 title: "..."
 subtitle: "..."
-autor: "Pablo Rodríguez López & IA (Claude Sonnet 4.6)"
+autor: "Pablo Rodríguez López & AI (model)"
 proyecto: "mindandhealth.org"
 tipo: "articulo"
 estado: "borrador - pendiente revision humana"
@@ -69,46 +77,49 @@ canales:
 tags:
   - tag1
   - tag2
-# --- bloque coautoria va aquí (lo añade Pablo con Tagger) ---
+# --- co-authorship block goes here (Pablo adds it with Tagger) ---
 ---
 
-[cuerpo del artículo]
+[article body]
 
-[pie ético]
+[ethical footer]
 ```
 ````
 
-Sigue:
-- `references/voz-editorial.md` rigurosamente.
-- `references/estructura-yaml.md` para el frontmatter.
-- `references/pie-etico.md` para el disclaimer (variante según tema).
-- Al menos un momento de *disidencia útil* salvo que el registro sea poético-fragmentario.
-- Metáfora orientadora recurrente si se acordó.
-- Cierre que resuena, no concluye.
+Follow:
 
-### 6. Recordar lo que falta (siempre, al final del volcado)
-Después del bloque markdown, en chat:
+- `references/editorial-voice.md` precisely.
+- `references/yaml-structure.md` for frontmatter.
+- `references/ethical-footer.md` for the appropriate disclaimer.
+- At least one moment of *useful dissent*, unless the register is poetic-fragmentary.
+- A recurring guiding metaphor if one was agreed.
+- An ending that resonates rather than concludes.
+
+### 6. State what remains
+
+After the Markdown block, say:
 
 ```
-Este canvas es un primer volcado. Queda iterar.
+This canvas is a first draft. It still needs iteration.
 
-Recuerda que al copiarlo a tu vault tendrás que añadir:
-- Bloque YAML de coautoría (con tu Tagger GPT).
-- Etiquetas finales formateadas (plantilla Obsidian).
-- Imagen, si decides incluirla (puedo darte un prompt 1570:880 si lo pides).
+When you copy it to your vault, remember to add:
+- The co-authorship YAML block (with your Tagger GPT).
+- Formatted final tags (Obsidian template).
+- An image, if you choose to include one (I can provide a 1570:880 prompt on request).
 
-¿Quieres que pulamos algo o lo dejamos madurar?
+Would you like to refine something, or let it rest?
 ```
 
-### 7. Entrar en modo iteración
-A partir de aquí, aplicar el protocolo de carriles (`references/modo-iterativo-canvas.md`). No seguir escribiendo versiones nuevas salvo en carriles "Petición" o "Sugerencia aprobada".
+### 7. Enter iteration mode
 
-## Anti-patrones
+From here, apply the lane protocol in `references/iterative-canvas-mode.md`. Do not produce new versions unless the lane is **Request** or **Approved suggestion**.
 
-- ❌ Escribir el canvas entero sin pasar por estructura preliminar (paso 4).
-- ❌ Forzar metáfora que no pega con el tema o con lo conversado.
-- ❌ Perder fragmentos, citas o matices que aparecieron en la conversación previa.
-- ❌ Clichés de divulgación ("en este artículo exploraremos…", "en conclusión…").
-- ❌ Inventar citas o referencias. Si Pablo mencionó a un autor, usar solo afirmaciones verificables o parafrasear declarando.
-- ❌ Enlaces internos inventados — verificar antes en el vault.
-- ❌ Guardar el canvas en disco. **Nunca.**
+## Anti-patterns
+
+- ❌ Write the entire canvas before the preliminary outline in step 4.
+- ❌ Force a metaphor that does not fit the topic or conversation.
+- ❌ Lose fragments, quotations, or nuances from the prior conversation.
+- ❌ Use clichés such as "in this article we will explore…" or "in conclusion…".
+- ❌ Invent quotations or references. Use only verifiable claims or clearly identified paraphrases.
+- ❌ Invent internal links—use only articles Pablo has supplied or confirmed.
+- ❌ Save the canvas to disk. **Never.**

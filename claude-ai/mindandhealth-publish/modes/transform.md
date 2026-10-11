@@ -1,80 +1,92 @@
-# Modo: transform (material fuente → canvas)
+# Mode: transform (source material → canvas)
 
-## Cuándo usar
-Pablo aporta material crudo: notas, papers, URLs, conversaciones previas, threads, audios transcritos. Hay que transformarlo en un canvas publicable.
+## When to use it
 
-## Recordatorio crítico
+Pablo provides raw material: notes, papers, URLs, prior conversations, threads, or audio transcripts. Transform it into a publishable canvas.
 
-**El canvas es un bloque markdown en el chat. No escribo en el vault ni creo archivos.**
+## Critical reminder
 
-## Pasos
+**The canvas is a Markdown block in chat. I do not write to the vault or create files.**
 
-### 1. Inventario de fuentes
-Preguntar si no está claro:
-- ¿Qué tipo de fuente(s)? (notas propias, paper, URL, transcripción, correo, conversación con otra IA…)
-- ¿Cuál es el material "ancla" (el más importante) y cuáles son complementarios?
-- ¿Hay algún fragmento que quiera conservar **textual** (cita, párrafo favorito)?
+## Steps
 
-### 2. Ingerir el material
-- Si es texto, PDF o imagen: Pablo lo adjunta o lo pega en el chat.
-- Si es URL: la abro como adjunto / búsqueda web si está disponible.
-- Si es paper científico (bioRxiv, medRxiv, ClinicalTrials, PubMed Central): pedir a Pablo que pegue el abstract o resumen relevante, o el DOI para que el modelo lo localice.
-- Si es conversación previa con otra IA: pedir a Pablo que la pegue o la resuma.
+### 1. Inventory the sources
 
-### 3. Extraer núcleo
-Identificar:
-- **Tesis emergente.** ¿Qué está diciendo el material, en una frase?
-- **2–4 ideas fuerza** que sostendrán el artículo.
-- **Citas o fragmentos** que deben quedar textuales (con atribución).
-- **Huecos** que habrá que rellenar con pensamiento propio o conexiones.
+If unclear, ask:
 
-Compartir este extracto con Pablo **antes** de abrir canvas:
+- What kind of source(s) are these: personal notes, paper, URL, transcript, email, another AI conversation?
+- Which material is the **anchor** and which sources are supplementary?
+- Is there any passage Pablo wants preserved **verbatim**?
+
+### 2. Ingest the material
+
+- For a local or vault file: ask Pablo to paste or upload it.
+- For a URL or research paper: ask Pablo to provide the relevant text if the platform cannot retrieve it.
+- For a prior conversation with another AI: ask Pablo to paste or summarize it.
+
+### 3. Extract the core
+
+Identify:
+
+- **Emerging thesis.** What does the material say in one sentence?
+- **2–4 core ideas** that will support the article.
+- **Quotations or passages** to preserve verbatim, with attribution.
+- **Gaps** that need original thought or connections.
+
+Share this extraction with Pablo **before** opening a canvas:
 
 ```
-Núcleo detectado:
-- Tesis: [...]
-- Ideas fuerza: [...]
-- Citas a preservar: [...]
-- Huecos / lo que habrá que añadir: [...]
-- Ángulo editorial sugerido: [...]
+Detected core:
+- Thesis: [...]
+- Core ideas: [...]
+- Quotations to preserve: [...]
+- Gaps / material to add: [...]
+- Suggested editorial angle: [...]
 ```
 
-Pablo ajusta o da luz verde.
+Pablo adjusts it or gives approval.
 
-### 4. Abrir canvas
-Aplica el paso 4–6 de `modes/generate.md` (proponer estructura → volcar canvas → recordar lo que falta).
+### 4. Open the canvas
 
-Reglas adicionales del modo transform:
-- **Atribución clara.** Toda cita externa lleva fuente. Si es paper, DOI o enlace. Si es URL, enlace. Si es nota propia de Pablo, indícalo ("de las notas previas").
-- **Distinguir hechos de interpretación.** Si el material aporta datos, sepáralos de la lectura editorial.
-- **No sobre-interpretar.** Si el material no da para tesis fuerte, decirlo antes de forzar el artículo.
+Apply steps 4–6 of `modes/generate.md`: propose structure, produce the canvas, and state what remains.
 
-### 5. Pie ético — variante correcta
-Si hay fuentes periodísticas, datos de actualidad o posicionamiento editorial: **usar pie ético extendido** (ver `references/pie-etico.md`). Listar fuentes en el pie.
+Additional rules for transform mode:
 
-### 6. Iteración
-Protocolo de carriles (`references/modo-iterativo-canvas.md`).
+- **Clear attribution.** Every external quotation includes a source. For a paper, include a DOI or link; for a URL, include the link; for Pablo's own note, identify it as such.
+- **Separate facts from interpretation.** Distinguish source data from editorial interpretation.
+- **Do not overinterpret.** If the material does not support a strong thesis, say so rather than forcing an article.
 
-## Casos especiales
+### 5. Use the correct ethical footer
 
-### Transformar una conversación con otra IA (ChatGPT, Gemini…)
-- Preservar fragmentos donde la otra IA aporta valor real.
-- Pablo suele incluir a la IA como interlocutor ("—me preguntaste", "—respondí"). Si el material lo pide, mantener registro dialogal.
-- Registro posible: "diálogo con IA" (raro pero válido, como en `vivir_con_ia_reflexiones.md`). Solo si Pablo lo pide — no por defecto.
+For journalistic sources, current data, or editorial positioning, **use the extended ethical footer** (see `references/ethical-footer.md`) and list the sources there.
 
-### Transformar papers o investigación científica
-- Usar MCP bio-research cuando apliquen.
-- Pablo valora rigor: citar DOI, distinguir preprint de peer-reviewed, señalar fecha.
-- Registro "mixto" (técnico/humanista) para que sea accesible sin perder precisión.
+### 6. Iterate
 
-### Transformar notas fragmentarias
-- A veces las notas piden registro poético-fragmentario en lugar de ensayo estructurado.
-- Si el material es ya episódico, conservar la estructura fragmentaria (como `esperanza_simbolo_rebeldia.md`).
+Use the lane protocol in `references/iterative-canvas-mode.md`.
 
-## Anti-patrones
+## Special cases
 
-- ❌ Fabricar "datos" que no estén en las fuentes.
-- ❌ Citar sin atribuir.
-- ❌ Descartar fragmentos que Pablo marcó como "a preservar".
-- ❌ Unificar voces si hay varias (notas propias + IA + texto externo) sin distinguirlas.
-- ❌ Escribir el canvas a archivo. **Nunca.**
+### Transforming a conversation with another AI
+
+- Preserve passages where the other AI makes a real contribution.
+- Pablo sometimes presents the AI as an interlocutor ("you asked me," "I answered"). Keep a dialogic register when the material calls for it.
+- "Dialogue with AI" is a rare but valid register, as in `vivir_con_ia_reflexiones.md`. Use it only when Pablo asks.
+
+### Transforming papers or scientific research
+
+- Use bio-research MCP tools when applicable.
+- Cite the DOI, distinguish preprints from peer-reviewed work, and include the date.
+- Use a mixed technical/humanistic register that remains accessible without losing precision.
+
+### Transforming fragmentary notes
+
+- Fragmentary notes may call for a poetic-fragmentary register rather than a structured essay.
+- If the material is already episodic, preserve that structure, as in `esperanza_simbolo_rebeldia.md`.
+
+## Anti-patterns
+
+- ❌ Fabricate facts not present in the sources.
+- ❌ Quote without attribution.
+- ❌ Discard passages Pablo marked for preservation.
+- ❌ Merge distinct voices (personal notes + AI + external text) without identifying them.
+- ❌ Write the canvas to a file. **Never.**

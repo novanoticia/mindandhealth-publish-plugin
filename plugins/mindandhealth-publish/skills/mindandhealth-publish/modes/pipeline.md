@@ -1,65 +1,70 @@
-# Modo: pipeline (conversación → canvas → derivados)
+# Mode: pipeline (conversation → canvas → derivatives)
 
-## Cuándo usar
-Pablo quiere recorrer el camino completo en una sesión: de conversación exploratoria a artículo publicable + newsletter LinkedIn + post feed + prompt imagen.
+## When to use it
 
-## Recordatorio crítico
+Pablo wants to complete the entire journey in one session: exploratory conversation, publishable article, LinkedIn newsletter, feed post, and image prompt.
 
-**Todo vive en el chat. Ningún archivo en disco, ningún toque al vault.**
+## Critical reminder
 
-## Pasos
+**Everything stays in chat. No files on disk and no changes to the vault.**
 
-### 1. Clasificar punto de partida
-- a) **Solo tema o intuición** → empezar en `modes/conversar.md` y dejar que cristalice.
-- b) **Borrador propio** → empezar en `modes/refine.md`.
-- c) **Material fuente** → empezar en `modes/transform.md`.
+## Steps
 
-### 2. Ejecutar fase inicial
-Según (a/b/c), seguir el modo correspondiente hasta tener un **canvas estable** (hito 2 o 3 de `references/modo-iterativo-canvas.md`).
+### 1. Classify the starting point
 
-**Pausa obligatoria antes de derivados.** Cuando el canvas esté listo, preguntar explícitamente:
+- a) **Only a topic or intuition** → start in `modes/converse.md` and let it crystallize.
+- b) **Pablo's own draft** → start in `modes/refine.md`.
+- c) **Source material** → start in `modes/transform.md`.
 
-> "Canvas listo. ¿Avanzamos a derivados (newsletter LinkedIn / post feed / prompt imagen 1570:880)? ¿Cuáles quieres?"
+### 2. Run the initial phase
 
-No avanzar automáticamente.
+Following (a/b/c), use the relevant mode until there is a **stable canvas** (milestone 2 or 3 in `references/iterative-canvas-mode.md`).
 
-### 3. Derivados — orden fijo
-Una vez validado el canvas y confirmados los derivados deseados, producir **en este orden**:
+**Mandatory pause before derivatives.** When the canvas is ready, ask explicitly:
 
-1. **Prompt imagen 1570:880** (`derivatives/banner-spec.md`)  
-   — primero, porque Pablo puede encargarla en paralelo mientras revisa el resto.
+> "The canvas is ready. Shall we move on to derivatives (LinkedIn newsletter / feed post / 1570:880 image prompt)? Which ones would you like?"
 
-2. **Newsletter LinkedIn** (`derivatives/linkedin-newsletter.md`)  
-   — versión larga del artículo adaptada al formato newsletter.
+Do not proceed automatically.
 
-3. **Post de feed LinkedIn** (`derivatives/linkedin-feed.md`)  
-   — versión corta que acompaña la publicación de la newsletter.
+### 3. Derivatives—fixed order
 
-Entregar los tres en **bloques separados y claramente etiquetados** dentro del chat.
+Once the canvas is approved and Pablo has confirmed the desired derivatives, produce them **in this order**:
 
-### 4. Paquete final
-Al terminar, ofrecer resumen:
+1. **1570:880 image prompt** (`derivatives/banner-spec.md`)
+   — first, so Pablo can commission it in parallel while reviewing the rest.
+
+2. **LinkedIn newsletter** (`derivatives/linkedin-newsletter.md`)
+   — a long-form adaptation of the article for the newsletter format.
+
+3. **LinkedIn feed post** (`derivatives/linkedin-feed.md`)
+   — the short version accompanying publication of the newsletter.
+
+Deliver the three in **separate, clearly labeled blocks** in chat.
+
+### 4. Final package
+
+At the end, offer this summary:
 
 ```
-Paquete listo:
+Package ready:
 
-1. ARTÍCULO OBSIDIAN (canvas markdown arriba) — para copiar a tu vault
-2. PROMPT IMAGEN 1570:880 — para pasar a tu generador
-3. NEWSLETTER LINKEDIN — para copiar al editor de newsletter
-4. POST FEED LINKEDIN — para copiar al editor de feed
+1. OBSIDIAN ARTICLE (Markdown canvas above) — to copy to your vault
+2. 1570:880 IMAGE PROMPT — to send to your generator
+3. LINKEDIN NEWSLETTER — to copy into the newsletter editor
+4. LINKEDIN FEED POST — to copy into the feed editor
 
-Falta todavía (lo haces tú):
-- Bloque YAML de coautoría (Tagger GPT)
-- Tags finales del artículo (plantilla Obsidian)
-- Imagen generada y embebida
-- Revisión editorial humana final
+Still to be done by you:
+- Co-authorship YAML block (Tagger GPT)
+- Final article tags (Obsidian template)
+- Generated and embedded image
+- Final human editorial review
 ```
 
-## Anti-patrones
+## Anti-patterns
 
-- ❌ Producir los 4 outputs sin pausa para validación del canvas base.
-- ❌ Cambiar el tono entre artículo y derivados. La newsletter debe sonar a Pablo, no a "post LinkedIn genérico".
-- ❌ Repetir literalmente párrafos enteros del artículo en la newsletter — adaptar al formato.
-- ❌ Generar imagen directamente — el skill solo produce el prompt descriptivo.
-- ❌ Saltarse la conversación exploratoria si Pablo vino con "solo tema". Los artículos emergen; no se piden.
-- ❌ Escribir cualquier cosa a archivo. **Todo vive en el chat.**
+- ❌ Produce all four outputs without pausing for validation of the base canvas.
+- ❌ Change tone between the article and its derivatives. The newsletter should sound like Pablo, not a generic LinkedIn post.
+- ❌ Repeat entire article paragraphs verbatim in the newsletter—adapt them to the medium.
+- ❌ Generate an image directly—the skill only produces the descriptive prompt.
+- ❌ Skip exploratory conversation when Pablo arrives with "only a topic." Articles emerge; they are not commissioned.
+- ❌ Write anything to a file. **Everything stays in chat.**

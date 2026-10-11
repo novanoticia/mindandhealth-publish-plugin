@@ -1,75 +1,77 @@
-# Derivado: Newsletter LinkedIn
+# Derivative: LinkedIn newsletter
 
-## Propósito
-Adaptar el artículo de mindandhealth.org a la newsletter de LinkedIn de Pablo. LinkedIn newsletter permite formato largo (varios miles de palabras), pero el lector llega en otro contexto: entre notificaciones, en el feed profesional.
+## Purpose
 
-## Diferencias con el artículo Obsidian
+Adapt a mindandhealth.org article for Pablo's LinkedIn newsletter. Although newsletters support long-form writing, their readers arrive in a different context: among notifications in a professional feed.
 
-| Elemento | Artículo Obsidian | Newsletter LinkedIn |
+## Differences from the Obsidian article
+
+| Element | Obsidian article | LinkedIn newsletter |
 |---|---|---|
-| Apertura | Epígrafe/blockquote | Gancho conversacional directo (1–2 frases) |
-| Tono | Reflexivo, pausado | Reflexivo pero con más respiración (párrafos más cortos) |
-| Metáfora | Puede ser sutil, extenderse | Explícita pronto, repetida en el cierre |
-| Estructura | H2 numeradas o libres | H2 claras, con respiración (subtítulo que invita a seguir) |
-| Imágenes | Obsidian `![[imagen.png]]` | Una imagen portada (la 1570:880), no más |
-| Enlaces internos | A mindandhealth.org | Solo los imprescindibles (LinkedIn penaliza muchos enlaces externos) |
-| Pie ético | Obligatorio | Versión corta + enlace al manifiesto ético en mindandhealth |
-| Cierre | Reflexivo, resuena | Reflexivo + pregunta directa al lector (LinkedIn invita a comentario) |
-| CTA | — | Un CTA suave al final: "Lee el artículo completo en mindandhealth.org/website/[slug]" |
+| Opening | Epigraph / blockquote | Direct conversational hook in 1–2 sentences |
+| Tone | Reflective, unhurried | Reflective with shorter, airier paragraphs |
+| Metaphor | May be subtle and extended | Introduced early and echoed at the end |
+| Structure | Numbered or free H2s | Clear H2s with inviting micro-headlines |
+| Images | Obsidian `![[image.png]]` | One 1570:880 cover image |
+| Internal links | mindandhealth.org links | Essentials only; LinkedIn penalizes many external links |
+| Ethical footer | Required | Short version + manifesto link |
+| Ending | Reflective and resonant | Reflective + a direct question for the reader |
+| CTA | None | Soft link to the full mindandhealth.org article |
 
-## Estructura tipo
+## Typical structure
 
 ```markdown
-**[Título — puede ser igual al del artículo o variación]**
+**[Title—same as the article or a variation]**
 
-**[Subtítulo o pregunta-gancho, una línea]**
+**[One-line subtitle or hook question]**
 
-[Gancho de apertura: 1–2 frases que planteen la tensión. NO un epígrafe largo.]
+[Opening hook: 1–2 sentences presenting the tension. Not a long epigraph.]
 
 ---
 
-[Desarrollo en 3–5 secciones cortas. Cada sección con H2 o bold que funcione como micro-titular.]
+[Development in 3–5 short sections. Each has an H2 or bold micro-headline.]
 
-## [Sección 1]
+## [Section 1]
 
-[Párrafos cortos, 2–4 líneas. Respiración visual.]
+[Short paragraphs of 2–4 lines with visual breathing room.]
 
-[Cita o blockquote cuando subraya algo clave.]
+[Quotation or blockquote emphasizing a key point.]
 
-## [Sección 2]
+## [Section 2]
 
 ...
 
 ---
 
-## [Cierre]
+## [Ending]
 
-[Reflexión breve que retoma la metáfora o tesis.]
+[Brief reflection returning to the metaphor or thesis.]
 
-**[Pregunta al lector, directa]**
+**[Direct question for the reader]**
 
 ---
 
-*Este texto es una adaptación para LinkedIn del artículo publicado en [mindandhealth.org/website/[slug]](URL). Allí encontrarás la versión completa con referencias, enlaces internos y pie ético extendido.*
+*This text adapts an article published at [mindandhealth.org/website/[slug]](URL). The full version includes references, internal links, and an extended ethical footer.*
 
-*Contenido co-creado con asistencia de IA, bajo criterios de transparencia y responsabilidad editorial. Más en nuestro [manifiesto ético](https://www.mindandhealth.org/website/manifiesto-editorial-etico-mindandhealth.org).*
+*Co-created with AI assistance under principles of transparency and editorial responsibility. Read our [ethical manifesto](https://www.mindandhealth.org/website/ethical-editorial-manifesto).*
 ```
 
-## Extensión
-- Entre 600 y 1500 palabras. Si el artículo original pasa de 2000, la newsletter condensa, no copia.
-- Si el artículo es breve (<800 palabras), la newsletter puede ser casi idéntica, solo ajustando apertura y cierre.
+## Length
 
-## Reglas
+- 600–1,500 words. If the original exceeds 2,000, condense rather than copy.
+- If the article is under 800 words, the newsletter may remain close to it while adjusting the opening and ending.
 
-- **Respetar la voz de Pablo.** Nada de "En este artículo exploraremos…" o "5 claves para…". La voz editorial no cambia.
-- **No repetir literalmente párrafos completos** del artículo Obsidian. Re-escribir para el medio.
-- **Imagen portada:** recordar que la 1570:880 va en cabecera de la newsletter (LinkedIn la usa como tarjeta).
-- **Sin emojis** en el cuerpo (coherente con la voz editorial de Pablo).
-- **Una pregunta final al lector** es obligatoria — es lo que convierte newsletter pasiva en conversación.
+## Rules
 
-## Anti-patrones
+- **Preserve Pablo's voice.** Avoid "In this article we will explore…" and "Five keys to…".
+- **Do not repeat full Obsidian paragraphs verbatim.** Rewrite for the medium.
+- **Cover image:** remind Pablo that the 1570:880 image belongs in the newsletter header.
+- **No emojis** in the body.
+- **A final question for the reader is mandatory**; it turns passive reading into conversation.
 
-- ❌ Tono "LinkedIn-voice" (*game-changer*, *hot take*, *unpopular opinion*).
-- ❌ Listas numeradas de "tips" o "learnings".
-- ❌ Más de 2–3 enlaces externos.
-- ❌ Omitir el CTA al artículo completo en mindandhealth.org.
+## Anti-patterns
+
+- ❌ Generic LinkedIn voice such as *game-changer*, *hot take*, or *unpopular opinion*.
+- ❌ Numbered lists of "tips" or "learnings."
+- ❌ More than 2–3 external links.
+- ❌ Omit the call to action linking to the complete mindandhealth.org article.
