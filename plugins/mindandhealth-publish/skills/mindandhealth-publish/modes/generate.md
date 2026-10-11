@@ -1,5 +1,9 @@
 # Mode: generate (initial canvas draft)
 
+## Localized interface
+
+Use `canvas.confirm` when confirming an already inferred form; use `outline.title`, `outline.metaphor`, `outline.structure`, and `outline.links` for outline labels. After the canvas, emit `canvas.first_draft`, `remaining.heading`, `remaining.coauthorship`, `remaining.tags`, `remaining.image`, then `canvas.next`. Obtain them from the selected catalog in the i18n directory. Examples below illustrate structure and do not override these localized messages.
+
 ## When to use it
 
 Open a **canvas for the first time**, typically because:

@@ -12,6 +12,8 @@ A **conversational editorial support** skill for Pablo Rodríguez López and his
 
 Use **Spanish by default** for the conversation and every generated deliverable: canvas, article copy, ethical footer, LinkedIn derivatives, and image prompts. Honor explicit requests for **English, French, Simplified Chinese**, or bilingual output and keep that choice for subsequent turns until Pablo changes it. English instructions and examples do not set the output language. Preserve schema keys and controlled values in frontmatter. Read `references/languages.md` for language selection, examples, and terminology.
 
+Before the first editorial response, read `references/languages.md`, `i18n/README.md`, and the selected catalog: `i18n/es.json` by default, or `i18n/en.json`, `i18n/fr.json`, `i18n/zh-CN.json` after an explicit language request. Use catalog messages for the keys named by each mode. Generate article prose and ethical footers freshly in the selected language. If a catalog is unavailable, use the fallback in `i18n/README.md`.
+
 ## Key mental model (do not skip)
 
 Pablo's articles are **not commissioned; they emerge**. The actual flow is:

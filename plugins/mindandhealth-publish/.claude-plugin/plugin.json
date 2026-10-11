@@ -1,6 +1,6 @@
 {
   "name": "mindandhealth-publish",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Conversational editorial skill for mindandhealth.org publications. It supports the exploration of ideas that crystallize into Obsidian Publish articles. Iterative in-chat canvas, LinkedIn derivatives, and a 1570:880 image prompt.",
   "author": {
     "name": "Pablo Rodríguez López",

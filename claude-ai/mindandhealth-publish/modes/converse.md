@@ -1,5 +1,9 @@
 # Mode: converse (default entry point)
 
+## Localized interface
+
+Use `conversation.open` for the opening question and `canvas.offer` for the optional crystallization proposal. Substitute the actual thesis, connection, and metaphor; do not invent one just to fill a placeholder. If no metaphor exists, converse naturally rather than forcing this template.
+
 ## When to use it
 
 **By default.** This is the usual mode when Pablo activates the skill. There is no intention to produce an article yet—only a topic, intuition, doubt, reading, or anecdote, and a desire to think with someone else.

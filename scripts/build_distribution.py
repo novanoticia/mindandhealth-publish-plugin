@@ -7,6 +7,11 @@ from pathlib import Path
 import re
 import zipfile
 
+if __package__:
+    from .validate_i18n import validate_distribution
+else:
+    from validate_i18n import validate_distribution
+
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / "plugins/mindandhealth-publish"
 CHAT = ROOT / "claude-ai/mindandhealth-publish"
@@ -38,6 +43,7 @@ def sync_manifests():
 
 
 def validate():
+    validate_distribution()
     for path, expected in manifest_outputs().items():
         if json.loads(path.read_text(encoding="utf-8")) != expected:
             raise ValueError(f"Stale manifest: {path.relative_to(ROOT)}; run --sync-manifests")
@@ -55,7 +61,7 @@ def validate():
         if not skill.startswith(f"---\nname: {name}\n"):
             raise ValueError(f"Unexpected skill name in {root}")
         for file in root.rglob("*.md"):
-            for relative in re.findall(r"`((?:modes|references|derivatives)/[^`\s]+\.md)`",
+            for relative in re.findall(r"`((?:modes|references|derivatives|i18n)/[^`\s]+\.(?:md|json))`",
                                        file.read_text(encoding="utf-8")):
                 if not (root / relative).is_file():
                     raise ValueError(f"Broken reference in {file}: {relative}")
@@ -72,7 +78,7 @@ def build(output_dir):
     archive = output_dir / ARCHIVE_NAME
     # Fixed timestamps, permissions, and ordering make repeat builds identical.
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
-        for path in sorted(CHAT.rglob("*.md")):
+        for path in sorted(p for p in CHAT.rglob("*") if p.suffix in {".md", ".json"} and p.is_file()):
             relative = path.relative_to(CHAT).as_posix()
             info = zipfile.ZipInfo(f"mindandhealth-publish-chat/{relative}",
                                    date_time=(1980, 1, 1, 0, 0, 0))
@@ -88,10 +94,19 @@ def main():
     parser.add_argument("--sync-manifests", action="store_true",
                         help="Refresh Claude and marketplace metadata from plugin.json")
     parser.add_argument("--check", action="store_true", help="Validate without creating a ZIP")
+    parser.add_argument("--sync-i18n", action="store_true",
+                        help="Copy canonical i18n resources to the self-contained chat variant")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "dist")
     args = parser.parse_args()
     if args.sync_manifests:
         sync_manifests()
+    if args.sync_i18n:
+        source = PLUGIN / "skills/mindandhealth-publish/i18n"
+        destination = CHAT / "i18n"
+        destination.mkdir(parents=True, exist_ok=True)
+        for path in sorted(source.iterdir()):
+            if path.is_file() and path.suffix in {".json", ".md"}:
+                (destination / path.name).write_bytes(path.read_bytes())
     if args.check:
         validate()
         print("Packaging validation passed.")

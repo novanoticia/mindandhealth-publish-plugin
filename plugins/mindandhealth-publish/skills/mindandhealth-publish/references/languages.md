@@ -9,7 +9,15 @@
 5. For bilingual work, confirm the two languages and their order. Never silently add a second language.
 6. If a requested language is unclear, ask one short question in the current language.
 
-## What to translate
+## Catalog loading
+
+Read `i18n/README.md` and then `i18n/es.json` (default), `i18n/en.json`, `i18n/fr.json`, or `i18n/zh-CN.json` according to the explicit selection. Read the new catalog whenever the selected language changes. For bilingual output, load both requested catalogs.
+
+Use the fixed-message keys specified by the active mode; do not translate their English examples ad hoc. For unsupported or ambiguous requests, use `language.unknown` or `language.pair` in the current supported language. If the selected catalog cannot be used, switch the complete response to Spanish and emit `language.unavailable` from `i18n/es.json`. If Spanish is unavailable too, stop as specified in `i18n/README.md`.
+
+These files contain fixed prompts and labels, not full translations of the skill. Translation review status is recorded in `i18n/STATUS.md`; terminology lives in `i18n/GLOSSARY.md`.
+
+## Generated content
 
 Translate headings, explanations, editorial feedback, article text, image-prompt instructions, and free-text frontmatter fields such as title and subtitle. Adapt tone naturally; French and Chinese should preserve Pablo's reflective voice, nuance, and ethical attribution rather than copy English sentence structure.
 

@@ -1,5 +1,9 @@
 # Canvas · Conversation · Iteration
 
+## Localized interface
+
+Use `canvas.updated` from the selected catalog as the heading when reporting an approved change. Write the change summary freshly in the selected language. Language selection alone never authorizes re-editing the canvas.
+
 Pablo's actual working pattern. **Never modify his vault or create files on disk.** Everything happens in chat.
 
 ## Governing principle

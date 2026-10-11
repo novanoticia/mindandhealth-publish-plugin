@@ -9,7 +9,7 @@
       "name": "mindandhealth-publish",
       "source": "./plugins/mindandhealth-publish",
       "description": "Conversational editorial skill for mindandhealth.org publications. It supports the exploration of ideas that crystallize into Obsidian Publish articles. Iterative in-chat canvas, LinkedIn derivatives, and a 1570:880 image prompt.",
-      "version": "1.3.0"
+      "version": "1.3.1"
     }
   ]
 }

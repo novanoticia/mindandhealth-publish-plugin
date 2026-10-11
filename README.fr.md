@@ -21,6 +21,18 @@ Exemples :
 
 Les instructions internes restent en anglais. Les citations, les URL, les noms de fichiers et les clés YAML sont conservés. Une source étrangère ne change pas automatiquement la langue de sortie. Voir le [guide des langues](plugins/mindandhealth-publish/skills/mindandhealth-publish/references/languages.md).
 
+## Ressources i18n
+
+Le skill charge les textes fixes depuis son [dossier i18n](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md) : `es.json` est la référence espagnole ; `en.json`, `fr.json` et `zh-CN.json` contiennent les mêmes clés et paramètres nommés. Les questions, titres d’interface et rappels utilisent ces ressources. La prose des articles et les notes éthiques sont rédigées à chaque fois.
+
+Le [glossaire](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md) et l’[état des traductions](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md) précisent les choix et les limites. Ces traductions sont des brouillons produits avec l’IA, sans révision linguistique humaine enregistrée. Les tests vérifient la structure, les empreintes des sources et le contenu du ZIP ; ils ne prouvent pas le comportement du modèle en situation réelle.
+
+```bash
+python3 scripts/build_distribution.py --sync-i18n --check
+python3 scripts/validate_i18n.py
+python3 -m unittest discover -s tests -v
+```
+
 ## Méthode de travail
 
 1. **Conversation exploratoire.** Pablo apporte un thème, une intuition, une question ou une lecture. L’assistant croise les perspectives, nuance et apporte des contre-arguments.

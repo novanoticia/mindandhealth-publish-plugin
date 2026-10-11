@@ -12,6 +12,25 @@ This is not an automatic article writer. It is a thinking partner: it converses 
 
 The skill instructions are written in English, but the **default output language is Spanish**. Request English, French, Simplified Chinese, or bilingual output explicitly; the skill keeps that choice until you change it. Source language and README language do not change this default. See the [language guide](plugins/mindandhealth-publish/skills/mindandhealth-publish/references/languages.md).
 
+## Localization resources
+
+The skill includes a real [i18n directory](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md), not just a language preference:
+
+- `es.json` is the canonical fixed-text catalog; `en.json`, `fr.json`, and `zh-CN.json` contain the same keys and named placeholders.
+- Each mode uses explicit catalog keys for prompts, headings, and reminders. Articles and ethical footers are still written freshly.
+- [Translation status](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md) and a [glossary](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md) track coverage and terminology. Translations are AI drafts; no human linguistic review is recorded.
+- Validation checks source fingerprints, key and placeholder parity, encoding, technical literals, and inclusion in the ZIP. These are structural checks, not live tests of model behavior.
+
+Edit resources in the plugin's i18n directory, then synchronize the chat copy and validate:
+
+```bash
+python3 scripts/build_distribution.py --sync-i18n --check
+python3 scripts/validate_i18n.py
+python3 -m unittest discover -s tests -v
+```
+
+If Spanish texts change, review the translations before updating their source hashes; the build does not refresh those hashes automatically. [Manual platform scenarios](tests/i18n-scenarios.md) document the behavior still to be evaluated.
+
 ## Mental model
 
 Pablo's articles **are not commissioned; they emerge**:
@@ -153,6 +172,7 @@ mindandhealth-publish-plugin/
 │   ├── commands/publish.md             # Installed /publish command
 │   └── skills/mindandhealth-publish/
 │       ├── SKILL.md                     # Orchestrator and flow
+│       ├── i18n/                        # ES/EN/FR/zh-CN catalogs, status, glossary
 │       ├── modes/
 │       │   ├── converse.md                 # Default mode
 │       │   ├── generate.md                 # Initial canvas

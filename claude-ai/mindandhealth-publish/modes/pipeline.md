@@ -1,6 +1,12 @@
 # Mode: pipeline (conversation → canvas → derivatives)
 
+## Localized interface
+
+Use `derivatives.confirm` for the mandatory approval question. Use `package.ready` and the applicable `package.article`, `package.image`, `package.newsletter`, `package.feed` keys for the final handoff, listing only outputs actually requested and produced. Use `remaining.heading` and the applicable `remaining.*` reminders. Read them from the selected catalog; English examples below do not override it.
+
 ## When to use it
+
+At final handoff, include `remaining.review` to remind Pablo that final human editorial review is still required.
 
 Pablo wants to complete the entire journey in one session: exploratory conversation, publishable article, LinkedIn newsletter, feed post, and image prompt.
 

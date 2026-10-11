@@ -21,7 +21,7 @@ class DistributionTests(unittest.TestCase):
             with zipfile.ZipFile(archive) as bundle:
                 expected = {
                     "mindandhealth-publish-chat/" + p.relative_to(CHAT).as_posix(): p.read_bytes()
-                    for p in CHAT.rglob("*.md")
+                    for p in CHAT.rglob("*") if p.is_file() and p.suffix in {".md", ".json"}
                 }
                 self.assertEqual(set(bundle.namelist()), set(expected))
                 for name, data in expected.items():

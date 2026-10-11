@@ -1,5 +1,9 @@
 # Mode: transform (source material → canvas)
 
+## Localized interface
+
+Use `transform.core`, `transform.thesis`, `transform.ideas`, `transform.quotes`, `transform.gaps`, and `transform.angle` from the selected catalog for the extraction summary. Insert source-grounded details as data; preserve original quotations and attribution.
+
 ## When to use it
 
 Pablo provides raw material: notes, papers, URLs, prior conversations, threads, or audio transcripts. Transform it into a publishable canvas.

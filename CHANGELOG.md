@@ -4,6 +4,19 @@ All notable changes to `mindandhealth-publish` are documented here. This project
 
 ## [Unreleased]
 
+## [1.3.1] — 2026-10-11
+
+### Fixed
+
+- Completed the localization layer with actual `i18n/es.json`, `en.json`, `fr.json`, and `zh-CN.json` catalogs, connected to the skill and its modes. Version 1.3.0 provided translated guides and language instructions but no fixed-text catalogs.
+- Added a terminology glossary, translation status, Spanish fallback, and SHA-256 source fingerprints for translations.
+- Added parity, placeholder, encoding, freshness, and negative tests. The chat ZIP now includes JSON resources as well as Markdown.
+- Spanish stays the default. Fixed prompts and labels now use canonical catalog wording; free-form prose and ethical footers remain freshly written. The catalogs consolidate interface messages rather than preserving earlier output byte for byte.
+
+### Validation limits
+
+- Catalog translations are AI drafts with no recorded human review. Automated checks validate structure and packaging, not linguistic quality or model compliance. Manual platform scenarios are documented separately.
+
 ## [1.3.0] — 2026-10-11
 
 ### Added

@@ -1,5 +1,9 @@
 # Mode: refine (Pablo's draft → polished canvas)
 
+## Localized interface
+
+Use `refine.diagnosis`, `refine.level`, and `refine.log` from the selected catalog for the diagnosis heading, editing-depth question, and optional editorial log. Write the actual diagnosis and log entries freshly in the selected language.
+
 ## When to use it
 
 Pablo already has a draft—his own or produced by another AI—and wants to polish it for publication. He pastes or shares it in chat.
