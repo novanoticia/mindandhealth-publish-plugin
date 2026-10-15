@@ -1,5 +1,7 @@
 # mindandhealth-publish-plugin
 
+[![Version actuelle sur main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fmindandhealth-publish-plugin%2Fmain%2Fplugins%2Fmindandhealth-publish%2Fplugin.json&query=%24.version&prefix=v&label=Version%20actuelle%20sur%20main&color=blue)](https://github.com/novanoticia/mindandhealth-publish-plugin/blob/main/plugins/mindandhealth-publish/plugin.json)
+
 [English](README.md) · [Français](README.fr.md) · [简体中文](README.zh-CN.md)
 
 Plugin Claude Code d’**accompagnement éditorial conversationnel** pour les publications de [mindandhealth.org](https://mindandhealth.org) sur Obsidian Publish.
