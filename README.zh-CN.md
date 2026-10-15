@@ -1,6 +1,7 @@
 # mindandhealth-publish-plugin
 
-[![main 当前版本](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fmindandhealth-publish-plugin%2Fmain%2Fplugins%2Fmindandhealth-publish%2Fplugin.json&query=%24.version&prefix=v&label=main%20%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC&color=blue)](https://github.com/novanoticia/mindandhealth-publish-plugin/blob/main/plugins/mindandhealth-publish/plugin.json)
+[![main 版本](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fmindandhealth-publish-plugin%2Fmain%2Fplugins%2Fmindandhealth-publish%2Fplugin.json&query=%24.version&prefix=v&label=main%20%E7%89%88%E6%9C%AC&color=blue)](https://github.com/novanoticia/mindandhealth-publish-plugin/blob/main/plugins/mindandhealth-publish/plugin.json)
+[![最新发布版本](https://img.shields.io/github/v/release/novanoticia/mindandhealth-publish-plugin?display_name=tag&label=%E6%9C%80%E6%96%B0%E5%8F%91%E5%B8%83%E7%89%88%E6%9C%AC&color=green)](https://github.com/novanoticia/mindandhealth-publish-plugin/releases/latest)
 
 [English](README.md) · [Français](README.fr.md) · [简体中文](README.zh-CN.md)
 
