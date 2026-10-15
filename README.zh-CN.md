@@ -1,5 +1,7 @@
 # mindandhealth-publish-plugin
 
+[![main 当前版本](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fmindandhealth-publish-plugin%2Fmain%2Fplugins%2Fmindandhealth-publish%2Fplugin.json&query=%24.version&prefix=v&label=main%20%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC&color=blue)](https://github.com/novanoticia/mindandhealth-publish-plugin/blob/main/plugins/mindandhealth-publish/plugin.json)
+
 [English](README.md) · [Français](README.fr.md) · [简体中文](README.zh-CN.md)
 
 这是一个 Claude Code 插件，为 [mindandhealth.org](https://mindandhealth.org) 的 Obsidian Publish 文章提供**对话式编辑协助**。
