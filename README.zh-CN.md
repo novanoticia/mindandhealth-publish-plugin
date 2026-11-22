@@ -24,18 +24,6 @@
 
 内部指令使用英语。引文、网址、文件名和 YAML 字段名保持不变。标题等自由文本字段使用所选语言，受控字段值继续遵循现有约定。详情见[语言指南](plugins/mindandhealth-publish/skills/mindandhealth-publish/references/languages.md)。
 
-## i18n 语言资源
-
-Skill 会从 [i18n 目录](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md)加载固定文本：`es.json` 是西班牙语基准；`en.json`、`fr.json` 和 `zh-CN.json` 包含相同的键和命名占位符。提问、界面标题及提醒使用这些资源；文章正文和伦理声明仍会根据内容重新撰写。
-
-[术语表](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md)和[翻译状态](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md)记录了覆盖范围及限制。这些翻译是 AI 草稿，尚无人工语言审核记录。自动测试检查结构、源文件摘要和 ZIP 内容，不能证明模型在实际平台上的行为。
-
-```bash
-python3 scripts/build_distribution.py --sync-i18n --check
-python3 scripts/validate_i18n.py
-python3 -m unittest discover -s tests -v
-```
-
 ## 工作方式
 
 1. **探索性对话：** Pablo 提出主题、直觉、问题或阅读材料，助手提供不同视角、补充细节和反论点。
@@ -151,6 +139,18 @@ README.zh-CN.md                          简体中文文档
 ```
 
 根目录中的 `.claude-plugin/` 描述插件市场，并不是第二份插件。插件内部的两个清单分别用于通用 Agent Plugins 客户端和 Claude。共享元数据只在 `plugins/mindandhealth-publish/plugin.json` 中维护，再由脚本同步到其他所需清单。
+
+## i18n 语言资源
+
+Skill 会从 [i18n 目录](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md)加载固定文本：`es.json` 是西班牙语基准；`en.json`、`fr.json` 和 `zh-CN.json` 包含相同的键和命名占位符。提问、界面标题及提醒使用这些资源；文章正文和伦理声明仍会根据内容重新撰写。
+
+[术语表](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md)和[翻译状态](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md)记录了覆盖范围及限制。这些翻译是 AI 草稿，尚无人工语言审核记录。自动测试检查结构、源文件摘要和 ZIP 内容，不能证明模型在实际平台上的行为。
+
+```bash
+python3 scripts/build_distribution.py --sync-i18n --check
+python3 scripts/validate_i18n.py
+python3 -m unittest discover -s tests -v
+```
 
 ## 构建与发布
 
