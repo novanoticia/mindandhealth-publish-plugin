@@ -7,32 +7,17 @@
 
 A Claude Code plugin providing **conversational editorial support** for [mindandhealth.org](https://mindandhealth.org) publications on Obsidian Publish.
 
-> **Compatible with [Agent Plugins 1.0.0](https://agent-plugins.org/specification)**, the portable packaging format of the Agentic AI Foundation. The package contains a portable `plugin.json` manifest and an Agent Skills-compatible `SKILL.md`.
->
-> **Also works in ChatGPT.** The skill consists only of instructions and editorial criteria, with no local execution. Add it from **Plugins** after enabling **Work** in the ChatGPT selector. It is also available on the free plan, subject to usage limits.
-
 This is not an automatic article writer. It is a thinking partner: it converses first, distills an article when the idea crystallizes, and creates LinkedIn or image-prompt derivatives on request. **Everything stays in chat; the vault is never modified.**
 
 The skill instructions are written in English, but the **default output language is Spanish**. Request English, French, Simplified Chinese, or bilingual output explicitly; the skill keeps that choice until you change it. Source language and README language do not change this default. See the [language guide](plugins/mindandhealth-publish/skills/mindandhealth-publish/references/languages.md).
 
-## Localization resources
+**On this page:** [Quick start](#quick-start) · [Mental model](#mental-model) · [What it never does](#what-it-never-does) · [Installation](#installation) · [Usage](#usage) · [Canvas iteration](#canvas-iteration-protocol) · [Localization](#localization-resources) · [Building and releasing](#building-and-releasing)
 
-The skill includes a real [i18n directory](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md), not just a language preference:
+## Quick start
 
-- `es.json` is the canonical fixed-text catalog; `en.json`, `fr.json`, and `zh-CN.json` contain the same keys and named placeholders.
-- Each mode uses explicit catalog keys for prompts, headings, and reminders. Articles and ethical footers are still written freshly.
-- [Translation status](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md) and a [glossary](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md) track coverage and terminology. Translations are AI drafts; no human linguistic review is recorded.
-- Validation checks source fingerprints, key and placeholder parity, encoding, technical literals, and inclusion in the ZIP. These are structural checks, not live tests of model behavior.
-
-Edit resources in the plugin's i18n directory, then synchronize the chat copy and validate:
-
-```bash
-python3 scripts/build_distribution.py --sync-i18n --check
-python3 scripts/validate_i18n.py
-python3 -m unittest discover -s tests -v
-```
-
-If Spanish texts change, review the translations before updating their source hashes; the build does not refresh those hashes automatically. [Manual platform scenarios](tests/i18n-scenarios.md) document the behavior still to be evaluated.
+1. **Install it** in Claude Code with the two commands under [Installation](#installation) (Claude.ai, Perplexity and Mistral use a ZIP).
+2. **Start talking**, not commissioning: `/publish` or "let's think about X".
+3. **When the idea has shape**, ask to "open a canvas", iterate on it, and copy the result to your vault yourself. Derivatives (newsletter, post, image prompt) are on request.
 
 ## Mental model
 
@@ -83,6 +68,12 @@ Add the marketplace and install the plugin:
 ```
 
 This enables the `/publish` command and natural-language triggers.
+
+### ChatGPT and other Agent Plugins clients
+
+> **Compatible with [Agent Plugins 1.0.0](https://agent-plugins.org/specification)**, the portable packaging format of the Agentic AI Foundation. The package contains a portable `plugin.json` manifest and an Agent Skills-compatible `SKILL.md`.
+>
+> **Also works in ChatGPT.** The skill consists only of instructions and editorial criteria, with no local execution. Add it from **Plugins** after enabling **Work** in the ChatGPT selector. It is also available on the free plan, subject to usage limits.
 
 ### Claude.ai
 
@@ -204,6 +195,25 @@ mindandhealth-publish-plugin/
 The root `.claude-plugin/` directory describes the **marketplace**, not a second plugin. Its catalog points to `plugins/mindandhealth-publish/`, the only installable plugin directory. Within that directory, `plugin.json` serves portable Agent Plugins clients, while `.claude-plugin/plugin.json` serves Claude. Both are required for compatibility; shared metadata is authored only in the portable manifest.
 
 The chat directory is a separate distribution for clients without local vault access. It retains a distinct skill name and instructions appropriate to that environment.
+
+## Localization resources
+
+The skill includes a real [i18n directory](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/README.md), not just a language preference:
+
+- `es.json` is the canonical fixed-text catalog; `en.json`, `fr.json`, and `zh-CN.json` contain the same keys and named placeholders.
+- Each mode uses explicit catalog keys for prompts, headings, and reminders. Articles and ethical footers are still written freshly.
+- [Translation status](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/STATUS.md) and a [glossary](plugins/mindandhealth-publish/skills/mindandhealth-publish/i18n/GLOSSARY.md) track coverage and terminology. Translations are AI drafts; no human linguistic review is recorded.
+- Validation checks source fingerprints, key and placeholder parity, encoding, technical literals, and inclusion in the ZIP. These are structural checks, not live tests of model behavior.
+
+Edit resources in the plugin's i18n directory, then synchronize the chat copy and validate:
+
+```bash
+python3 scripts/build_distribution.py --sync-i18n --check
+python3 scripts/validate_i18n.py
+python3 -m unittest discover -s tests -v
+```
+
+If Spanish texts change, review the translations before updating their source hashes; the build does not refresh those hashes automatically. [Manual platform scenarios](tests/i18n-scenarios.md) document the behavior still to be evaluated.
 
 ## Building and releasing
 
